@@ -1,0 +1,14 @@
+:root {
+    --background-color: #181726;
+}
+
+/*Load the font*/
+@font-face {
+    font-family: "PlusJakartaSans";
+    src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("woff2");
+}
+
+/*Apply font*/
+body,button {
+    font-family: "PlusJakartaSans";
+}

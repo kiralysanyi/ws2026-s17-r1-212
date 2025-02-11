@@ -1,0 +1,73 @@
+header {
+    background-color: var(--background-color);
+    height: 10vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin: 0px;
+    color: white;
+    line-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #32304b;
+    z-index: 1;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5vw;
+    height: auto;
+    user-select: none;
+    line-height: 35px;
+
+}
+
+header nav a {
+    display: inline-block;
+    position: relative;
+    
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    transition: 200ms;
+    height: 2px;
+    background-color: white;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+header img {
+    margin-left: 5vw;
+}
+
+#download-login-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+#download-login-container {
+    color: #a2a5c0;
+    margin-right: 5vw;
+}
+
+#download-login-container button {
+    padding: 10px;
+    width: 70px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: #5F6FE7;
+    color: white;
+}
