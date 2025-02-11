@@ -1,11 +1,9 @@
 #hero {
-    position: absolute;
-    top: 10vh;
-    left: 0px;
     width: 100%;
-    height: 50vh;
+    height: 600px;
     background-color: var(--background-color);
     overflow: hidden;
+    position: relative;
 }
 
 /* Opening animation */
@@ -18,27 +16,28 @@
 #hero::after {
     position: absolute;
     top: 0px;
-    left: 50%;
+    left: 40vw;
+    width: 20vw;
     border-radius: 100%;
-    -webkit-box-shadow: 0px 0px 300px 95px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: 0px 0px 300px 95px rgba(255, 255, 255, 0.75);
-    box-shadow: 0px 0px 300px 95px rgba(255, 255, 255, 0.75);
-    background-color: white;
+    -webkit-box-shadow: 0px 0px 1000px 80px rgba(175, 175, 175, 0.5);
+    -moz-box-shadow: 0px 0px 1000px 80px rgba(175, 175, 175, 0.5);
+    box-shadow: 0px 0px 1000px 80px rgba(175, 175, 175, 0.5);
+    background-color: transparent;
     display: block;
     content: "";
 }
 
 .circle {
     position: absolute;
-    width: 50vh;
-    height: 50vh;
+    width: 34vw;
+    height: 34vw;
     background-color: transparent;
     border-radius: 100%;
-    border: 100px solid #ffffff09;
+    border: 8vw solid #ffffff09;
 }
 
 #hero h1 {
-    font-size: 70px;
+    font-size: 6vw;
     animation: 500ms ease-out forwards slide-in;
 }
 
@@ -56,10 +55,10 @@
 }
 
 #hero-content p {
-    color: #A2B2DE;
+    color: #7f89ab;
     width: 80%;
-    line-height: 25px;
-    font-size: 20px;
+    line-height: 2.4vw;
+    font-size: 1.5vw;
     margin-left: auto;
     margin-right: auto;
     opacity: 0;
@@ -74,7 +73,7 @@
 }
 
 .text-gradient {
-    background-image: linear-gradient(white, #A2B2DE);
+    background-image: linear-gradient(#fbfcfd, #8095b1);
     color: transparent;
     background-clip: text;
 }
@@ -82,22 +81,4 @@
 #hero button {
     width: 150px;
     margin: 15px;
-}
-
-#hero .button {
-    padding: 10px;
-    height: 40px;
-    border-radius: 30px;
-    border: none;
-    background-color: #5F6FE7;
-    color: white;
-}
-
-#hero .secondary-button {
-    padding: 10px;
-    height: 40px;
-    border-radius: 30px;
-    border: none;
-    background-color: #232331;
-    color: white;
 }

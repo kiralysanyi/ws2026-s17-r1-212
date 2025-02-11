@@ -1,0 +1,14 @@
+#about {
+    position: relative;
+    height: 400px;
+    background-image: url("../assets/laundromat-with-girl-legs.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 22vw;
+    padding-right: 22vw;
+}

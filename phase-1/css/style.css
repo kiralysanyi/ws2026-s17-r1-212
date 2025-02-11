@@ -1,5 +1,12 @@
 :root {
-    --background-color: #181726;
+    --background-color: #0d121f;
+    --primary-color: #3d81db;
+    --secondary-text-color: #bbc7e3;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /*Load the font*/
@@ -8,7 +15,35 @@
     src: url("../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("woff2");
 }
 
-/*Apply font*/
-body,button {
+/*Apply the font*/
+body,
+button {
     font-family: "PlusJakartaSans";
+}
+
+body {
+    display: flex;
+    padding: 0px;
+    margin: 0;
+    gap: 0px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.button {
+    padding: 10px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.secondary-button {
+    padding: 10px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: #232331;
+    color: #c5d2ee;
 }
