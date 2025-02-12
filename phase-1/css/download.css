@@ -1,0 +1,43 @@
+#download {
+    position: relative;
+    max-width: 100vw;
+    height: 35vw;
+    background-color: var(--background-color);
+    color: white;
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    padding-top: 7vw;
+    padding-left: 8vw;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#download #laundromat {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    transform: translate(15%, 25px);
+    max-height: 90%;
+    width: 60%;
+    border-radius: 30px;
+    border: 10px solid #3d414c;
+    object-fit: cover;
+}
+
+#store-buttons-container {
+    display: flex;
+    flex-direction: row;
+    width: 10vw;
+    height: 5vw;
+    gap: 2vw;
+}
+
+#store-buttons-container img {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+#download .header1 {
+    margin-top: 60px;
+}

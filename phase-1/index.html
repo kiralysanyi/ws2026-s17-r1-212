@@ -11,192 +11,273 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/howitworks.css">
     <link rel="stylesheet" href="css/whyus.css">
+    <link rel="stylesheet" href="css/download.css">
+    <link rel="stylesheet" href="css/locations.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/svg">
 </head>
 
 <body>
     <header>
-        <img src="./assets/sudsy-logo.svg" alt="sudsy-logo">
+        <img src="./assets/sudsy-logo.svg" alt="sudsy-logo" style="height: 23%;">
         <nav>
             <a href="#about">About</a>
             <a href="#how-it-works">How it Works</a>
-            <a>Why Sudsy</a>
-            <a>Locations</a>
+            <a href="#why-us">Why Sudsy</a>
+            <a href="#locations">Locations</a>
         </nav>
         <div id="download-login-container">
-            <a>Download</a>
+            <a href="#download">Download</a>
             <button>Log In</button>
         </div>
     </header>
-    <!-- Hero -->
-    <section id="hero">
-        <!-- Background circles -->
-        <span class="circle" style="top: 0px; left: 100% ; transform: translate(-50%, -50%);"></span>
-        <span class="circle" style="top: 100%; left: -12vw; transform: translate(-50%, -50%);"></span>
-
-        <!-- Content of the hero -->
-        <div id="hero-content">
-            <h1 class="text-gradient">
-                Laundry Done Smarter
-                <br>
-                with AI
-            </h1>
-            <p>
-                Effortlessly manage your laundromat visits with our cutting-edge app and modernized system—now featuring
-                AI-powered laundry recommendations!
-            </p>
-            <div id="hero-buttons">
-                <button class="button">Explore Locations</button>
-                <button class="secondary-button">Download the App</button>
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <span class="header1"><b>WHO WE ARE</b></span>
-        <span class="header2"><b>About Sudsy</b></span>
-        <p style="font-size: 1.2vw;">
-            Sudsy is <b>Hungary's</b> first fully connected laundromat franchise, designed to make laundry day
-            <b>effortless</b> with
-            cutting-edge technology and convenient locations. Our mobile app lets you reserve machines, track
-            progress, and
-            manage payments—<b>all from your phone.</b> With our new <b>AI-powered fabric analysis</b>, you can
-            <b>upload a photo of
-                your
-                clothes</b>, and we'll recommend the ideal wash and dry settings, ensuring your garments are cared
-            for
-            perfectly
-            every time.
-        </p>
-    </section>
-    <section id="how-it-works">
-        <span class="header1"><b>HOW IT WORKS</b></span>
-        <span class="header2"><b>How to Use it?</b></span>
-
-
-        <span class="header3">Three Simple Steps to Cleaner Clothes</span>
-
-        <div class="card-container">
-            <div class="card" id="card-nearest">
-                <div class="content">
-                    <div class="inner-content">
-                        <span style="color: black; position: absolute; top: 30px; left: 20px; font-size: 13px;"><b>Search
-                                location</b></span>
-                        <span
-                            style="background-color: #f3f5f7; position: absolute; right: 0px; top: 54px; width: 130px; height: 40px; color: black; text-align: left;line-height: 40px; padding-left: 15px; border-top-left-radius: 2.5px; border-bottom-left-radius: 2.5px;">Debr<span
-                                id="blinking-cursor">|</span></span>
-                        <span
-                            style="position: absolute; bottom: 0px; left: 20px; height: 60px; width: 100px; background-color: #f3f5f7; border-top-left-radius: 2.5px; border-top-right-radius: 2.5px;">
-                            <span
-                                style="position: absolute; top: 10px; left: 10%; height: 7px; width: 80%; background-color: #e1e7ed; border-radius: 5px;"></span>
-                            <span
-                                style="position: absolute; top: 22px; left: 10%; height: 5px; width: 40%; background-color: #e1e7ed; border-radius: 3px;"></span>
-                            <span
-                                style="position: absolute; top: 33px; left: 10%; height: 5px; width: 70%; background-color: #e1e7ed; border-radius: 5px;"></span>
-                        </span>
-                    </div>
-                    <div class="number">1</div>
+    <main>
+        <section id="hero">
+            <!-- Background circles -->
+            <span class="circle" style="top: 0px; left: 100% ; transform: translate(-50%, -50%);"></span>
+            <span class="circle" style="top: 100%; left: -12vw; transform: translate(-50%, -50%);"></span>
+    
+            <!-- Content of the hero -->
+            <div id="hero-content">
+                <h1 class="text-gradient">
+                    Laundry Done Smarter
+                    <br>
+                    with AI
+                </h1>
+                <p>
+                    Effortlessly manage your laundromat visits with our cutting-edge app and modernized system—now featuring
+                    AI-powered laundry recommendations!
+                </p>
+                <div id="hero-buttons">
+                    <a href="#locations"><button class="button" style="width: 11vw;">Explore Locations</button></a>
+                    <a href="#download"><button class="secondary-button" style="width: 11vw;">Download the App</button></a>
                 </div>
-
-                <p>Find the nearest Sudsy laundromat via the app.</p>
             </div>
-            <div class="card" id="card-pick">
-                <div class="content">
-                    <div class="inner-content">
-                        <span style="color: var(--primary-color); position: absolute; top: 30px; left: 50px;">1.
-                            washer</span>
-                        <!-- TODO: animate svg -->
-                        <svg id="second-card-washer" style="position: absolute; top: 50px; left: 40px;" width="91"
+        </section>
+        <section id="about">
+            <span class="header1"><b>WHO WE ARE</b></span>
+            <span class="header2"><b>About Sudsy</b></span>
+            <p style="font-size: 1.2vw;">
+                Sudsy is <b>Hungary's</b> first fully connected laundromat franchise, designed to make laundry day
+                <b>effortless</b> with
+                cutting-edge technology and convenient locations. Our mobile app lets you reserve machines, track
+                progress, and
+                manage payments—<b>all from your phone.</b> With our new <b>AI-powered fabric analysis</b>, you can
+                <b>upload a photo of
+                    your
+                    clothes</b>, and we'll recommend the ideal wash and dry settings, ensuring your garments are cared
+                for
+                perfectly
+                every time.
+            </p>
+        </section>
+        <section id="how-it-works">
+            <span class="header1"><b>HOW IT WORKS</b></span>
+            <span class="header2"><b>How to Use it?</b></span>
+    
+    
+            <span class="header3">Three Simple Steps to Cleaner Clothes</span>
+    
+            <div class="card-container">
+                <div class="card" id="card-nearest">
+                    <div class="content">
+                        <div class="inner-content">
+                            <span style="color: black; position: absolute; top: 30px; left: 20px; font-size: 13px;"><b>Search
+                                    location</b></span>
+                            <span
+                                style="background-color: #f3f5f7; position: absolute; right: 0px; top: 54px; width: 130px; height: 40px; color: black; text-align: left;line-height: 40px; padding-left: 15px; border-top-left-radius: 2.5px; border-bottom-left-radius: 2.5px;">Debr<span
+                                    id="blinking-cursor">|</span></span>
+                            <span
+                                style="position: absolute; bottom: 0px; left: 20px; height: 60px; width: 100px; background-color: #f3f5f7; border-top-left-radius: 2.5px; border-top-right-radius: 2.5px;">
+                                <span
+                                    style="position: absolute; top: 10px; left: 10%; height: 7px; width: 80%; background-color: #e1e7ed; border-radius: 5px;"></span>
+                                <span
+                                    style="position: absolute; top: 22px; left: 10%; height: 5px; width: 40%; background-color: #e1e7ed; border-radius: 3px;"></span>
+                                <span
+                                    style="position: absolute; top: 33px; left: 10%; height: 5px; width: 70%; background-color: #e1e7ed; border-radius: 5px;"></span>
+                            </span>
+                        </div>
+                        <div class="number">1</div>
+                    </div>
+    
+                    <p>Find the nearest Sudsy laundromat via the app.</p>
+                </div>
+                <div class="card" id="card-pick">
+                    <div class="content">
+                        <div class="inner-content">
+                            <span style="color: var(--primary-color); position: absolute; top: 30px; left: 50px;">1.
+                                washer</span>
+                            <svg id="second-card-washer" style="position: absolute; top: 50px; left: 40px;" width="91"
+                                height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.375 22.75H22.75" stroke="#3d81db" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="washer-paths-2" style="--length: 11.375px;" />
+                                <path d="M64.4583 22.75H64.4962" stroke="#3d81db" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round" class="washer-paths-2" style="--length: 0.04px;" />
+                                <path
+                                    d="M72.0417 7.58337H18.9583C14.7702 7.58337 11.375 10.9785 11.375 15.1667V75.8334C11.375 80.0215 14.7702 83.4167 18.9583 83.4167H72.0417C76.2298 83.4167 79.625 80.0215 79.625 75.8334V15.1667C79.625 10.9785 76.2298 7.58337 72.0417 7.58337Z"
+                                    stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                    class="washer-path-3" style="--length: 250px;" />
+                                <path
+                                    d="M45.5 68.25C55.9704 68.25 64.4584 59.7621 64.4584 49.2917C64.4584 38.8213 55.9704 30.3334 45.5 30.3334C35.0296 30.3334 26.5417 38.8213 26.5417 49.2917C26.5417 59.7621 35.0296 68.25 45.5 68.25Z"
+                                    stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                    class="washer-paths-1" style="--length: 120px;" />
+                                <path
+                                    d="M45.5 68.25C48.014 68.25 50.4251 67.2513 52.2028 65.4737C53.9805 63.696 54.9791 61.2849 54.9791 58.7709C54.9791 56.2568 53.9805 53.8458 52.2028 52.0681C50.4251 50.2904 48.014 49.2917 45.5 49.2917C42.9859 49.2917 40.5749 48.293 38.7972 46.5153C37.0195 44.7376 36.0208 42.3266 36.0208 39.8125C36.0208 37.2985 37.0195 34.8874 38.7972 33.1098C40.5749 31.3321 42.9859 30.3334 45.5 30.3334"
+                                    stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                                    class="washer-paths-1" style="--length: 90px;" />
+                            </svg>
+                        </div>
+                        <div class="number">2</div>
+                    </div>
+    
+                    <p>Pick a machine and a time that works for you.</p>
+                </div>
+                <div class="card" id="card-start">
+                    <div class="content" style="background-color: white;">
+                        <div class="number">3</div>
+                        <svg style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" width="91"
                             height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.375 22.75H22.75" stroke="#3d81db" stroke-width="3" stroke-linecap="round"
-                                stroke-linejoin="round" class="washer-paths-2" style="--length: 11.375px;" />
+                                stroke-linejoin="round" />
                             <path d="M64.4583 22.75H64.4962" stroke="#3d81db" stroke-width="3" stroke-linecap="round"
-                                stroke-linejoin="round" class="washer-paths-2" style="--length: 0.04px;" />
+                                stroke-linejoin="round" />
                             <path
                                 d="M72.0417 7.58337H18.9583C14.7702 7.58337 11.375 10.9785 11.375 15.1667V75.8334C11.375 80.0215 14.7702 83.4167 18.9583 83.4167H72.0417C76.2298 83.4167 79.625 80.0215 79.625 75.8334V15.1667C79.625 10.9785 76.2298 7.58337 72.0417 7.58337Z"
-                                stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-                                class="washer-path-3" style="--length: 250px;" />
-                            <path
-                                d="M45.5 68.25C55.9704 68.25 64.4584 59.7621 64.4584 49.2917C64.4584 38.8213 55.9704 30.3334 45.5 30.3334C35.0296 30.3334 26.5417 38.8213 26.5417 49.2917C26.5417 59.7621 35.0296 68.25 45.5 68.25Z"
-                                stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-                                class="washer-paths-1" style="--length: 120px;" />
-                            <path
-                                d="M45.5 68.25C48.014 68.25 50.4251 67.2513 52.2028 65.4737C53.9805 63.696 54.9791 61.2849 54.9791 58.7709C54.9791 56.2568 53.9805 53.8458 52.2028 52.0681C50.4251 50.2904 48.014 49.2917 45.5 49.2917C42.9859 49.2917 40.5749 48.293 38.7972 46.5153C37.0195 44.7376 36.0208 42.3266 36.0208 39.8125C36.0208 37.2985 37.0195 34.8874 38.7972 33.1098C40.5749 31.3321 42.9859 30.3334 45.5 30.3334"
-                                stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
-                                class="washer-paths-1" style="--length: 90px;" />
+                                stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    
+                            <g id="washer-rotating-part">
+                                <path
+                                    d="M45.5 68.25C55.9704 68.25 64.4584 59.7621 64.4584 49.2917C64.4584 38.8213 55.9704 30.3334 45.5 30.3334C35.0296 30.3334 26.5417 38.8213 26.5417 49.2917C26.5417 59.7621 35.0296 68.25 45.5 68.25Z"
+                                    stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M45.5 68.25C48.014 68.25 50.4251 67.2513 52.2028 65.4737C53.9805 63.696 54.9791 61.2849 54.9791 58.7709C54.9791 56.2568 53.9805 53.8458 52.2028 52.0681C50.4251 50.2904 48.014 49.2917 45.5 49.2917C42.9859 49.2917 40.5749 48.293 38.7972 46.5153C37.0195 44.7376 36.0208 42.3266 36.0208 39.8125C36.0208 37.2985 37.0195 34.8874 38.7972 33.1098C40.5749 31.3321 42.9859 30.3334 45.5 30.3334"
+                                    stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+    
                         </svg>
+                        <span class="button"
+                            style="line-height: 15px; height: 15px; width: 40px; font-size: 15px; text-align: center; width: 70px; position: absolute; bottom: 15px; left: 50%; transform: translate(-50%, 0%);">Start</span>
                     </div>
-                    <div class="number">2</div>
+    
+                    <p>Start your machine and get notified when it's done.</p>
                 </div>
-
-                <p>Pick a machine and a time that works for you.</p>
             </div>
-            <div class="card" id="card-start">
-                <div class="content" style="background-color: white;">
-                    <div class="number">3</div>
-                    <svg style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);" width="91"
-                        height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.375 22.75H22.75" stroke="#3d81db" stroke-width="3" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M64.4583 22.75H64.4962" stroke="#3d81db" stroke-width="3" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M72.0417 7.58337H18.9583C14.7702 7.58337 11.375 10.9785 11.375 15.1667V75.8334C11.375 80.0215 14.7702 83.4167 18.9583 83.4167H72.0417C76.2298 83.4167 79.625 80.0215 79.625 75.8334V15.1667C79.625 10.9785 76.2298 7.58337 72.0417 7.58337Z"
-                            stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-
-                        <g id="washer-rotating-part">
-                            <path
-                                d="M45.5 68.25C55.9704 68.25 64.4584 59.7621 64.4584 49.2917C64.4584 38.8213 55.9704 30.3334 45.5 30.3334C35.0296 30.3334 26.5417 38.8213 26.5417 49.2917C26.5417 59.7621 35.0296 68.25 45.5 68.25Z"
-                                stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M45.5 68.25C48.014 68.25 50.4251 67.2513 52.2028 65.4737C53.9805 63.696 54.9791 61.2849 54.9791 58.7709C54.9791 56.2568 53.9805 53.8458 52.2028 52.0681C50.4251 50.2904 48.014 49.2917 45.5 49.2917C42.9859 49.2917 40.5749 48.293 38.7972 46.5153C37.0195 44.7376 36.0208 42.3266 36.0208 39.8125C36.0208 37.2985 37.0195 34.8874 38.7972 33.1098C40.5749 31.3321 42.9859 30.3334 45.5 30.3334"
-                                stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                        </g>
-
-                    </svg>
-                    <span class="button"
-                        style="line-height: 15px; height: 15px; text-align: center; width: 70px; position: absolute; bottom: 15px; left: 50%; transform: translate(-50%, 0%);">Start</span>
+    
+            <div id="how-it-works-buttons">
+                <button class="button" style="width: 8vw">Download</button>
+                <button class="secondary-button" style="width: 8vw;">Locations</button>
+            </div>
+        </section>
+        <section id="why-us">
+            <h1 class="header1">WHY US?</h1>
+            <h2 class="header2" style="margin-bottom: 5px;">Why Choose Sudsy?</h2>
+            <h3 class="header3"
+                style="color: #a4abb9; font-size: 20px; font-weight: 500; width: 53vw; margin-left: auto; margin-right: auto; margin-top: 0px;">
+                Our platform helps your wash your clothes. These are some of the reasons why you should use our services.
+            </h3>
+    
+            <div class="features">
+                <div class="feature">
+                    <img src="./assets/mobile-icon.svg" alt="mobile-icon">
+                    <h1>Next-Gen Mobile App</h1>
+                    <p>Book machines, track progress, and pay—all from your smartphone.</p>
                 </div>
-
-                <p>Start your machine and get notified when it's done.</p>
+                <div class="feature">
+                    <img src="./assets/brain-icon.svg" alt="brain-icon">
+                    <h1>AI Recommendations</h1>
+                    <p>Snap a photo of your clothes and let our AI suggest the best wash and dry settings.</p>
+                </div>
+                <div class="feature">
+                    <img src="./assets/faceid-icon.svg" alt="faceid-icon">
+                    <h1>Modernized Experience</h1>
+                    <p>Say goodbye to waiting and hello to efficiency with smart systems designed for convenience.</p>
+                </div>
+                <div class="feature">
+                    <img src="./assets/leaf-icon.svg" alt="leaf-icon">
+                    <h1>Eco-Friendly</h1>
+                    <p>Optimize your laundry process to save time, energy, and money.</p>
+                </div>
             </div>
+        </section>
+        <section id="download">
+            <h1 class="header1">DOWNLOAD OUR APP!</h1>
+            <h2 class="header2" style="margin-top: 0px;">Your Laundry, <br> Simplified</h2>
+            <h3 class="header3" style="font-weight: 300; width: 36vw; margin-top: 0px;">Your perfect
+                laundry experience is just a tap away—download the Sudsy app now on the App Store or Google Play.</h3>
+            <div id="store-buttons-container">
+                <img src="./assets/app-store-download.png" alt="app-store-download.png">
+                <img src="./assets/google-play-download.png" alt="google-play-download.png">
+            </div>
+            <img id="laundromat" src="./assets/laundromat.png" alt="laundromat.png">
+        </section>
+        <section id="locations">
+            <h1 class="header1">WHERE ARE WE?</h1>
+            <h2 class="header2">Highlighted Locations</h2>
+            <!-- TODO: animate cards -->
+            <div class="card-container">
+                <div class="card" id="card1">
+                    <h1>Szeged Riverside</h1>
+                    <p>
+                        Description: Enjoy a relaxing view of the Tisza River while your laundry gets done. Our eco-friendly
+                        machines
+                        and cozy seating area make this a customer favorite.
+                    </p>
+    
+                    <div class="location">
+                        <b>6723 Szeged</b>
+                        <br>
+                        Fő utca 121
+                    </div>
+                </div>
+    
+                <div class="card" id="card2">
+                    <h1>Budapest Central</h1>
+                    <p>
+                        Located in the heart of Budapest, this flagship Sudsy location features 24/7 availability and the
+                        latest
+                        high-efficiency washers and dryers. Perfect for busy professionals and students alike.
+                    </p>
+    
+                    <div class="location">
+                        <b>1051 Budapest</b>
+                        <br>
+                        Kossuth Lajos utca 662
+                    </div>
+                </div>
+                <div class="card" id="card3">
+    
+                    <h1>Debrecen West End</h1>
+                    <p>
+                        A convenient spot for locals, this Sudsy branch offers a spacious, clean environment with easy
+                        parking
+                        and
+                        quick
+                        access to nearby shops.
+                    </p>
+    
+                    <div class="location">
+                        <b>4027 Debrecen</b>
+                        <br>
+                        Nyíri utca 992
+                    </div>
+                </div>
+            </div>
+            <button class="button" style="width: 12vw; margin-left: auto; margin-right: auto;">View all locations</button>
+        </section>
+    </main>
+    <footer>
+        <div class="circle" style="position: absolute; bottom: 0px; left: 50%; transform: translate(-50%, 85%); border: 6vw solid #ffffff09;"></div>
+        <img src="./assets/sudsy-logo.svg" alt="sudsy-logo" style="margin-left: 10vw; margin-right: auto; height: 23%;">
+        <div id="footer-links">
+            <span>Privacy Policy</span>
+            <span
+                style="border-left: 1px solid gray; border-right: 1px solid gray; padding-left: 10px; padding-right: 10px; margin-left: 10px; margin-right: 10px;">Terms
+                & Conditions</span>
+            <span>Cookie Policy</span>
         </div>
 
-        <div id="how-it-works-buttons">
-            <button class="button" style="width: 110px;">Download</button>
-            <button class="secondary-button" style="width: 110px;">Locations</button>
-        </div>
-    </section>
-    <section id="why-us">
-        <h1 class="header1">WHY US?</h1>
-        <h2 class="header2">Why Choose Sudsy?</h2>
-        <h3 class="header3"
-            style="color: #a4abb9; font-size: 20px; font-weight: 500; width: 53vw; margin-left: auto; margin-right: auto;">
-            Our platform helps your wash your clothes. These are some of the reasons why you should use our services.
-        </h3>
-
-        <div class="features">
-            <div class="feature">
-                <img src="./assets/mobile-icon.svg" alt="mobile-icon">
-                <h1>Next-Gen Mobile App</h1>
-                <p>Book machines, track progress, and pay—all from your smartphone.</p>
-            </div>
-            <div class="feature">
-                <img src="./assets/brain-icon.svg" alt="brain-icon">
-                <h1>AI Recommendations</h1>
-                <p>Snap a photo of your clothes and let our AI suggest the best wash and dry settings.</p>
-            </div>
-            <div class="feature">
-                <img src="./assets/faceid-icon.svg" alt="faceid-icon">
-                <h1>Modernized Experience</h1>
-                <p>Say goodbye to waiting and hello to efficiency with smart systems designed for convenience.</p>
-            </div>
-            <div class="feature">
-                <img src="./assets/leaf-icon.svg" alt="leaf-icon">
-                <h1>Eco-Friendly</h1>
-                <p>Optimize your laundry process to save time, energy, and money.</p>
-            </div>
-        </div>
-    </section>
+        <span style="color: #8ea0bc; margin-left: auto; margin-right: 10vw">© SkillsIT 2025</span>
+    </footer>
 </body>
 
 </html>

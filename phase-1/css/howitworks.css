@@ -1,18 +1,18 @@
 #how-it-works {
     position: relative;
     width: 100%;
-    height: 720px;
+    height: 45vw;
     background-color: var(--background-color);
     color: white;
     text-align: center;
     display: flex;
     justify-content: start;
-    padding-top: 10vh;
+    padding-top: 10vw;
     flex-direction: column;
 }
 
 #how-it-works .card-container {
-    margin-top: 90px;
+    margin-top: 4vw;
     margin-bottom: 60px;
     display: flex;
     flex-direction: row;
@@ -23,14 +23,14 @@
 #how-it-works .card {
     position: relative;
     display: block;
-    width: 250px;
-    height: 280px;
+    width: 18vw;
+    height: 19vw;
     user-select: none;
 }
 
 #how-it-works .card p {
     position: absolute;
-    bottom: 0px;
+    top: 210px;
     font-size: 1.2vw;
 }
 
