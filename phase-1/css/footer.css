@@ -11,6 +11,7 @@ footer {
     flex-direction: row;
     overflow: hidden;
     height: 8.5vw;
+    font-size: 1vw;
 }
 
 #footer-links {

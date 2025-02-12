@@ -47,6 +47,7 @@ header nav a:hover::after {
 
 header img {
     margin-left: 5vw;
+    height: 35%;
 }
 
 #download-login-container {
@@ -58,16 +59,6 @@ header img {
 #download-login-container {
     color: var(--secondary-text-color);
     margin-right: 5vw;
-    font-size: 0.9vw;
+    font-size: 1.2vw;
 }
 
-#download-login-container button {
-    padding: 10px;
-    width: 5vw;
-    height: 3vw;
-    border-radius: 3vw;
-    border: none;
-    font-size: 0.9vw;
-    background-color: var(--primary-color);
-    color: white;
-}

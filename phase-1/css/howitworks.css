@@ -1,19 +1,18 @@
 #how-it-works {
     position: relative;
     width: 100%;
-    height: 45vw;
     background-color: var(--background-color);
     color: white;
     text-align: center;
     display: flex;
     justify-content: start;
-    padding-top: 10vw;
+    padding-top: 8vw;
     flex-direction: column;
 }
 
 #how-it-works .card-container {
     margin-top: 4vw;
-    margin-bottom: 60px;
+    margin-bottom: 4vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -23,8 +22,8 @@
 #how-it-works .card {
     position: relative;
     display: block;
-    width: 18vw;
-    height: 19vw;
+    width: 210px;
+    height: 250px;
     user-select: none;
 }
 
@@ -75,6 +74,7 @@
     flex-direction: row;
     gap: 15px;
     justify-content: center;
+    margin-bottom: 5vw;
 }
 
 #card-nearest:hover #blinking-cursor {

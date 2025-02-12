@@ -14,22 +14,22 @@
 }
 
 #hero::after {
+    content: "";
     position: absolute;
     top: 0px;
-    left: 40vw;
-    width: 20vw;
-    border-radius: 100%;
-    -webkit-box-shadow: 0px 0px 1000px 80px rgba(175, 175, 175, 0.5);
-    -moz-box-shadow: 0px 0px 1000px 80px rgba(175, 175, 175, 0.5);
-    box-shadow: 0px 0px 1000px 80px rgba(175, 175, 175, 0.5);
-    background-color: transparent;
-    display: block;
-    content: "";
+    left: 50%;
+    width: 90vw;
+    height: 90vw;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
 #hero h1 {
     font-size: 6vw;
     animation: 500ms ease-out forwards slide-in;
+    margin-bottom: 0px;
 }
 
 #hero-content {
@@ -54,13 +54,13 @@
     margin-right: auto;
     opacity: 0;
     animation: 500ms ease-out forwards slide-in;
-    animation-delay: 500ms;
+    animation-delay: 400ms;
 }
 
 #hero-buttons {
     opacity: 0;
     animation: 500ms ease-out forwards slide-in;
-    animation-delay: 1000ms;
+    animation-delay: 900ms;
 }
 
 .text-gradient {
@@ -70,6 +70,6 @@
 }
 
 #hero button {
-    width: 150px;
+    width: 13vw;
     margin: 15px;
 }
