@@ -65,6 +65,6 @@ header img {
     height: 40px;
     border-radius: 30px;
     border: none;
-    background-color: #5F6FE7;
+    background-color: var(--primary-color);
     color: white;
 }

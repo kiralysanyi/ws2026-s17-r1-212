@@ -1,7 +1,7 @@
 #how-it-works {
     position: relative;
     width: 100%;
-    height: 1000px;
+    height: 720px;
     background-color: var(--background-color);
     color: white;
     text-align: center;
@@ -86,19 +86,105 @@
     animation: 1s linear infinite blink;
 }
 
-
-
 @keyframes blink {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 1;
     }
+
     60% {
         opacity: 0;
     }
+
     100% {
         opacity: 0;
+    }
+}
+
+/* Washer animations */
+
+/* Second card 😭 */
+
+@keyframes path-animation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dashoffset: var(--length);
+    }
+    50.01% {
+        stroke-dashoffset: calc(var(--length)*-1);
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes path-animation-2 {
+    0% {
+        stroke-dashoffset: calc(var(--length) / 5);
+    }
+    50% {
+        stroke-dashoffset: var(--length);
+    }
+    50.01% {
+        stroke-dashoffset: calc(var(--length)*-1);
+    }
+    100% {
+        stroke-dashoffset: calc(var(--length) / 5);
+    }
+}
+
+@keyframes path-animation-3 {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dashoffset: var(--length);
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+#card-pick:hover #second-card-washer .washer-paths-2 {
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: 0;
+    animation: 2s linear infinite path-animation-3;
+    animation-fill-mode: forwards;
+}
+
+
+#card-pick:hover #second-card-washer .washer-path-3 {
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: 0;
+    animation: 2s linear infinite path-animation-2;
+    animation-fill-mode: forwards;
+}
+
+#card-pick:hover #second-card-washer .washer-paths-1 {
+    stroke-dasharray: var(--length);
+    stroke-dashoffset: 0;
+
+    animation: 2s linear infinite path-animation;
+    animation-fill-mode: forwards;
+}
+
+/* 3rd card related stuff */
+#card-start:hover #washer-rotating-part {
+    transform-origin: 45.5px 49.5px;
+    animation: 1s linear infinite spin;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }

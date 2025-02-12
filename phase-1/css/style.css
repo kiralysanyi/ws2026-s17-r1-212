@@ -47,3 +47,16 @@ body {
     background-color: #232331;
     color: #c5d2ee;
 }
+
+section .header1 {
+    color: var(--primary-color); font-size: 1.3vw; margin-bottom: 10px;
+}
+
+section .header2 {
+    font-size: 3vw; margin-bottom: 20px;
+}
+
+section .header3 {
+    color: var(--secondary-text-color); font-size: 1.5vw;
+}
+
