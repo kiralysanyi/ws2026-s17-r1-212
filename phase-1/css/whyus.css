@@ -25,12 +25,12 @@
     text-align: left;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 1fr;
 }
 
 .feature img {
     background-color: var(--primary-color);
-    padding: 12px;
+    padding: 1vw;
     border-radius: 12px;
     grid-row: span 2;
     grid-column: 1;
@@ -42,9 +42,12 @@
     grid-column: 2;
     margin-bottom: 0px;
     margin-left: 20px;
+    font-size: 2vw;
+    padding-bottom: 0px;
 }
 
 .feature p {
+    font-size: 1.2vw;
     grid-row: 2;
     width: 25vw;
     grid-column: 2;
