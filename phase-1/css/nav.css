@@ -1,6 +1,5 @@
 header {
     background-color: var(--background-color);
-    height: 8vw;
     width: 100%;
     margin: 0px;
     color: white;
@@ -10,6 +9,7 @@ header {
     align-items: center;
     border-bottom: 2px solid #353543;
     z-index: 1;
+    height: 100px;
 }
 
 header nav {
@@ -19,15 +19,15 @@ header nav {
     gap: 2.5vw;
     height: auto;
     user-select: none;
-    font-size: 1.2vw;
-    line-height: 2.3vw;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
 
 }
+
 
 header nav a {
     display: inline-block;
     position: relative;
-    
 }
 
 header nav a::after {
@@ -50,15 +50,25 @@ header img {
     height: 35%;
 }
 
+
+
 #download-login-container {
     display: flex;
     align-items: center;
     gap: 25px;
-}
-
-#download-login-container {
     color: var(--secondary-text-color);
     margin-right: 5vw;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 900px){
+    /* TODO: burger */
+    header nav {
+        display: none;
+    }
+
+    #download-login-container {
+        display: none;
+    }
 }
 

@@ -20,6 +20,13 @@
     gap: 3vw;
 }
 
+@media screen and (max-width:1100px) {
+    .features {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
+
 .feature {
     position: relative;
     text-align: left;
@@ -30,7 +37,7 @@
 
 .feature img {
     background-color: var(--primary-color);
-    padding: 1vw;
+    padding: 1rem;
     border-radius: 12px;
     grid-row: span 2;
     grid-column: 1;
@@ -42,14 +49,14 @@
     grid-column: 2;
     margin-bottom: 0px;
     margin-left: 20px;
-    font-size: 2vw;
+    font-size: 2rem;
     padding-bottom: 0px;
 }
 
 .feature p {
-    font-size: 1.2vw;
+    font-size: 1.2rem;
     grid-row: 2;
-    width: 25vw;
+    max-width: 80%;
     grid-column: 2;
     color: #788398;
     margin-left: 20px;
