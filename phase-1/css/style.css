@@ -58,13 +58,13 @@ body {
 
 section .header1 {
     color: var(--primary-color);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
 section .header2 {
     margin-top: 0px;
-    font-size: 3rem; margin-bottom: 10px;
+    font-size: 2.5rem; margin-bottom: 10px;
 }
 
 section .header3 {

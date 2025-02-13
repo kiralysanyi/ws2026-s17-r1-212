@@ -3,25 +3,23 @@ header {
     width: 100%;
     margin: 0px;
     color: white;
-    line-height: 10vh;
+    line-height: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-bottom: 2px solid #353543;
     z-index: 1;
-    height: 100px;
+    height: 6.25rem;
 }
 
 header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2.5vw;
+    gap: 40px;
     height: auto;
     user-select: none;
-    font-size: 1.2rem;
-    line-height: 2.5rem;
-
+    font-size: 1rem;
 }
 
 
@@ -46,8 +44,8 @@ header nav a:hover::after {
 }
 
 header img {
-    margin-left: 5vw;
-    height: 35%;
+    margin-left: 135px;
+    margin-right: auto;
 }
 
 
@@ -55,10 +53,18 @@ header img {
 #download-login-container {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 1.875rem;
     color: var(--secondary-text-color);
-    margin-right: 5vw;
-    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: 120px;
+    font-size: 1rem;
+}
+
+#download-login-container button {
+    height: 3.3rem;
+    width: 5.8rem !important;
+    padding: 0px;
+    margin: 0px;
 }
 
 @media screen and (max-width: 900px){
