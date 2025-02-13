@@ -34,9 +34,9 @@
     <main>
         <section id="hero">
             <!-- Background circles -->
-            <span class="circle" style="top: 0px; left: 100% ; transform: translate(-50%, -50%);"></span>
-            <span class="circle" style="top: 100%; left: -12vw; transform: translate(-50%, -50%);"></span>
-    
+            <span class="circle" id="circle1" style="top: 0px; left: 100% ; transform: translate(-50%, -50%);"></span>
+            <span class="circle" id="circle2" style="top: 100%; left: -12vw; transform: translate(-50%, -50%);"></span>
+
             <!-- Content of the hero -->
             <div id="hero-content">
                 <h1 class="text-gradient">
@@ -45,7 +45,8 @@
                     with AI
                 </h1>
                 <p>
-                    Effortlessly manage your laundromat visits with our cutting-edge app and modernized system—now featuring
+                    Effortlessly manage your laundromat visits with our cutting-edge app and modernized system—now
+                    featuring
                     AI-powered laundry recommendations!
                 </p>
                 <div id="hero-buttons">
@@ -55,8 +56,8 @@
             </div>
         </section>
         <section id="about">
-            <span class="header1"><b>WHO WE ARE</b></span>
-            <span class="header2"><b>About Sudsy</b></span>
+            <h1 class="header1"><b>WHO WE ARE</b></h1>
+            <h2 class="header2"><b>About Sudsy</b></h2>
             <p style="font-size: 1.3rem;">
                 Sudsy is <b>Hungary's</b> first fully connected laundromat franchise, designed to make laundry day
                 <b>effortless</b> with
@@ -74,45 +75,47 @@
         <section id="how-it-works">
             <span class="header1"><b>HOW IT WORKS</b></span>
             <span class="header2"><b>How to Use it?</b></span>
-    
-    
+
+
             <span class="header3">Three Simple Steps to Cleaner Clothes</span>
-    
+
             <div class="card-container">
                 <div class="card" id="card-nearest">
                     <div class="content">
                         <div class="inner-content">
-                            <span style="color: black; position: absolute; top: 2.2vw; left: 2vw; font-size: 1vw"><b>Search
+                            <span style="color: black; position: absolute; top: 10%; left: 10%; font-size: 12px"><b>Search
                                     location</b></span>
                             <span
-                                style="background-color: #f3f5f7; position: absolute; right: 0px; top: 4vw; width: 12.5vw; height: 40px; color: black; text-align: left;line-height: 40px; padding-left: 15px; border-top-left-radius: 2.5px; border-bottom-left-radius: 2.5px;">Debr<span
+                                style="background-color: #f3f5f7; position: absolute; right: 0px; top: 45px; width: 80%; height: 40px; color: black; text-align: left;line-height: 40px; padding-left: 15px; border-top-left-radius: 2.5px; border-bottom-left-radius: 2.5px;">Debr<span
                                     id="blinking-cursor">|</span></span>
                             <span
-                                style="position: absolute; bottom: 0px; left: 2vw; height: 7vw; width: 9vw; background-color: #f3f5f7; border-top-left-radius: 2.5px; border-top-right-radius: 2.5px;">
+                                style="position: absolute; bottom: 0px; left: 10%; height: 40%; width: 60%; background-color: #f3f5f7; border-top-left-radius: 2.5px; border-top-right-radius: 2.5px;">
                                 <span
-                                    style="position: absolute; top: 1vw; left: 10%; height: 0.7vw; width: 80%; background-color: #e1e7ed; border-radius: 5px;"></span>
+                                    style="position: absolute; top: 15%; left: 10%; height: 12%; width: 80%; background-color: #e1e7ed; border-radius: 5px;"></span>
                                 <span
-                                    style="position: absolute; top: 2.1vw; left: 10%; height: 0.4vw; width: 40%; background-color: #e1e7ed; border-radius: 3px;"></span>
+                                    style="position: absolute; top: 35%; left: 10%; height: 0.4vw; width: 40%; background-color: #e1e7ed; border-radius: 3px;"></span>
                                 <span
-                                    style="position: absolute; top: 3vw; left: 10%; height: 5px; width: 70%; background-color: #e1e7ed; border-radius: 5px;"></span>
+                                    style="position: absolute; top: 55%; left: 10%; height: 5px; width: 70%; background-color: #e1e7ed; border-radius: 5px;"></span>
                             </span>
                         </div>
                         <div class="number">1</div>
                     </div>
-    
+
                     <p>Find the nearest Sudsy laundromat via the app.</p>
                 </div>
                 <div class="card" id="card-pick">
                     <div class="content">
                         <div class="inner-content">
-                            <span style="color: var(--primary-color); position: absolute; top: 2.5vw; left: 4.2vw; font-size: 1.2vw;">1.
+                            <span
+                                style="color: var(--primary-color); position: absolute; top: 10%; left: 50%; transform: translate(-50%, 0%); font-size: 15px;">1.
                                 washer</span>
-                            <svg id="second-card-washer" style="position: absolute; top: calc(50% - 4vw); left: calc(50% - 5vw);" width="8vw"
-                                height="8vw" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="second-card-washer" style="position: absolute; top: 25%; left: 20%" width="60%"
+                                height="60%" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11.375 22.75H22.75" stroke="#3d81db" stroke-width="3" stroke-linecap="round"
                                     stroke-linejoin="round" class="washer-paths-2" style="--length: 11.375px;" />
-                                <path d="M64.4583 22.75H64.4962" stroke="#3d81db" stroke-width="3" stroke-linecap="round"
-                                    stroke-linejoin="round" class="washer-paths-2" style="--length: 0.04px;" />
+                                <path d="M64.4583 22.75H64.4962" stroke="#3d81db" stroke-width="3"
+                                    stroke-linecap="round" stroke-linejoin="round" class="washer-paths-2"
+                                    style="--length: 0.04px;" />
                                 <path
                                     d="M72.0417 7.58337H18.9583C14.7702 7.58337 11.375 10.9785 11.375 15.1667V75.8334C11.375 80.0215 14.7702 83.4167 18.9583 83.4167H72.0417C76.2298 83.4167 79.625 80.0215 79.625 75.8334V15.1667C79.625 10.9785 76.2298 7.58337 72.0417 7.58337Z"
                                     stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
@@ -129,14 +132,14 @@
                         </div>
                         <div class="number">2</div>
                     </div>
-    
+
                     <p>Pick a machine and a time that works for you.</p>
                 </div>
                 <div class="card" id="card-start">
                     <div class="content" style="background-color: white;">
                         <div class="number">3</div>
-                        <svg style="position: absolute; top: calc(50% - 5.5vw); left: calc(50% - 4vw);" width="8vw"
-                            height="8vw" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg style="position: absolute; top: 20%; left: 25%;" width="50%" height="50%"
+                            viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.375 22.75H22.75" stroke="#3d81db" stroke-width="3" stroke-linecap="round"
                                 stroke-linejoin="round" />
                             <path d="M64.4583 22.75H64.4962" stroke="#3d81db" stroke-width="3" stroke-linecap="round"
@@ -144,7 +147,7 @@
                             <path
                                 d="M72.0417 7.58337H18.9583C14.7702 7.58337 11.375 10.9785 11.375 15.1667V75.8334C11.375 80.0215 14.7702 83.4167 18.9583 83.4167H72.0417C76.2298 83.4167 79.625 80.0215 79.625 75.8334V15.1667C79.625 10.9785 76.2298 7.58337 72.0417 7.58337Z"
                                 stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-    
+
                             <g id="washer-rotating-part">
                                 <path
                                     d="M45.5 68.25C55.9704 68.25 64.4584 59.7621 64.4584 49.2917C64.4584 38.8213 55.9704 30.3334 45.5 30.3334C35.0296 30.3334 26.5417 38.8213 26.5417 49.2917C26.5417 59.7621 35.0296 68.25 45.5 68.25Z"
@@ -153,19 +156,19 @@
                                     d="M45.5 68.25C48.014 68.25 50.4251 67.2513 52.2028 65.4737C53.9805 63.696 54.9791 61.2849 54.9791 58.7709C54.9791 56.2568 53.9805 53.8458 52.2028 52.0681C50.4251 50.2904 48.014 49.2917 45.5 49.2917C42.9859 49.2917 40.5749 48.293 38.7972 46.5153C37.0195 44.7376 36.0208 42.3266 36.0208 39.8125C36.0208 37.2985 37.0195 34.8874 38.7972 33.1098C40.5749 31.3321 42.9859 30.3334 45.5 30.3334"
                                     stroke="#3d81db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                             </g>
-    
+
                         </svg>
                         <span class="button"
-                            style="line-height: 1vw; height: 1vw; width: 5vw; font-size: 1.3vw; text-align: center;  position: absolute; bottom: 15px; left: 50%; transform: translate(-50%, 0%);"><b>Start</b></span>
+                            style="line-height: 8px; height: 8px; width: 30%; font-size: 18px; text-align: center;  position: absolute; bottom: 15px; left: 50%; transform: translate(-50%, 0%);"><b>Start</b></span>
                     </div>
-    
+
                     <p>Start your machine and get notified when it's done.</p>
                 </div>
             </div>
-    
+
             <div id="how-it-works-buttons">
-                <button class="button">Download</button>
-                <button class="secondary-button">Locations</button>
+                <button class="button" style="width: 140px; height: 50px;">Download</button>
+                <button class="secondary-button" style="width: 140px; height: 50px;">Locations</button>
             </div>
         </section>
         <section id="why-us">
@@ -173,9 +176,10 @@
             <h2 class="header2" style="margin-bottom: 5px;">Why Choose Sudsy?</h2>
             <h3 class="header3"
                 style="color: #a4abb9; font-weight: 500; width: 53vw; margin-left: auto; margin-right: auto; margin-top: 0px;">
-                Our platform helps your wash your clothes. These are some of the reasons why you should use our services.
+                Our platform helps your wash your clothes. These are some of the reasons why you should use our
+                services.
             </h3>
-    
+
             <div class="features">
                 <div class="feature">
                     <img src="./assets/mobile-icon.svg" alt="mobile-icon">
@@ -200,44 +204,48 @@
             </div>
         </section>
         <section id="download">
-            <h1 class="header1">DOWNLOAD OUR APP!</h1>
-            <h2 class="header2" style="margin-top: 0px;">Your Laundry, <br> Simplified</h2>
-            <h3 class="header3" style="font-weight: 300; width: 45vw; margin-top: 0.5vw;">Your perfect
-                laundry experience is just a tap away—download the Sudsy app now on the App Store or Google Play.</h3>
-            <div id="store-buttons-container">
-                <img src="./assets/app-store-download.png" alt="app-store-download.png">
-                <img src="./assets/google-play-download.png" alt="google-play-download.png">
+            <div id="textcontainer">
+                <h1 class="header1">DOWNLOAD OUR APP!</h1>
+                <h2 class="header2" style="margin-top: 0px;">Your Laundry, <br> Simplified</h2>
+                <h3 class="header3" style="font-weight: 300; width: 45vw; margin-top: 0.5vw;">Your perfect
+                    laundry experience is just a tap away—download the Sudsy app now on the App Store or Google Play.
+                </h3>
+                <div id="store-buttons-container">
+                    <img src="./assets/app-store-download.png" alt="app-store-download.png">
+                    <img src="./assets/google-play-download.png" alt="google-play-download.png">
+                </div>
             </div>
             <img id="laundromat" src="./assets/laundromat.png" alt="laundromat.png">
         </section>
         <section id="locations">
             <h1 class="header1">WHERE ARE WE?</h1>
             <h2 class="header2">Highlighted Locations</h2>
-            <!-- TODO: animate cards -->
             <div class="card-container">
                 <div class="card" id="card1">
                     <h1>Szeged Riverside</h1>
                     <p>
-                        Description: Enjoy a relaxing view of the Tisza River while your laundry gets done. Our eco-friendly
+                        Description: Enjoy a relaxing view of the Tisza River while your laundry gets done. Our
+                        eco-friendly
                         machines
                         and cozy seating area make this a customer favorite.
                     </p>
-    
+
                     <div class="location">
                         <b>6723 Szeged</b>
                         <br>
                         Fő utca 121
                     </div>
                 </div>
-    
+
                 <div class="card" id="card2">
                     <h1>Budapest Central</h1>
                     <p>
-                        Located in the heart of Budapest, this flagship Sudsy location features 24/7 availability and the
+                        Located in the heart of Budapest, this flagship Sudsy location features 24/7 availability and
+                        the
                         latest
                         high-efficiency washers and dryers. Perfect for busy professionals and students alike.
                     </p>
-    
+
                     <div class="location">
                         <b>1051 Budapest</b>
                         <br>
@@ -245,7 +253,7 @@
                     </div>
                 </div>
                 <div class="card" id="card3">
-    
+
                     <h1>Debrecen West End</h1>
                     <p>
                         A convenient spot for locals, this Sudsy branch offers a spacious, clean environment with easy
@@ -254,7 +262,7 @@
                         quick
                         access to nearby shops.
                     </p>
-    
+
                     <div class="location">
                         <b>4027 Debrecen</b>
                         <br>
@@ -265,18 +273,19 @@
             <button class="button" style="margin-left: auto; margin-right: auto;">View all locations</button>
         </section>
     </main>
+    <!-- TODO: make footer responsive -->
     <footer>
-        <div class="circle" style="position: absolute; bottom: 0px; left: 50%; transform: translate(-50%, 85%); border: 6vw solid #ffffff09;"></div>
-        <img src="./assets/sudsy-logo.svg" alt="sudsy-logo" style="margin-left: 10vw; margin-right: auto; height: 23%;">
+        <div class="circle"
+            style="position: absolute; bottom: 0px; left: 50%; transform: translate(-50%, 85%); border: 6vw solid #ffffff09;">
+        </div>
+        <img src="./assets/sudsy-logo.svg" alt="sudsy-logo">
         <div id="footer-links">
-            <span>Privacy Policy</span>
-            <span
-                style="border-left: 1px solid gray; border-right: 1px solid gray; padding-left: 10px; padding-right: 10px; margin-left: 10px; margin-right: 10px;">Terms
-                & Conditions</span>
-            <span>Cookie Policy</span>
+            <span id="privacy-policy-link">Privacy Policy</span>
+            <span id="tos-link">Terms & Conditions</span>
+            <span id="cookie-policy-link">Cookie Policy</span>
         </div>
 
-        <span style="color: #8ea0bc; margin-left: auto; margin-right: 10vw">© SkillsIT 2025</span>
+        <span style="color: #8ea0bc;" id="copyright">© SkillsIT 2025</span>
     </footer>
 </body>
 

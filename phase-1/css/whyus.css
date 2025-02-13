@@ -17,7 +17,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     margin: 30px auto;
-    gap: 3vw;
+    width: 80%;
 }
 
 @media screen and (max-width:1100px) {
@@ -60,4 +60,20 @@
     grid-column: 2;
     color: #788398;
     margin-left: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .feature p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .feature h1 {
+        max-width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .features {
+        width: 95%;
+    }
 }

@@ -19,27 +19,36 @@
     gap: 7vw;
 }
 
+@media screen and (max-width:1000px) {
+    #how-it-works .card-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 #how-it-works .card {
     position: relative;
-    display: block;
-    width: 20vw;
-    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    width: 230px;
     user-select: none;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
 #how-it-works .card p {
-    position: absolute;
-    top: 19vw;
+    position: relative;
     font-size: 1.5rem;
 }
 
 #how-it-works .card .content {
-    position: absolute;
-    top: 0px;
-    left: calc(50% - 9vw);
-    width: 18vw;
+    position: relative;
+    width: 200px;
     border-radius: 15px;
-    height: 18.5vw;
+    height: 200px;
     background-color: #F0F3F6;
 }
 
@@ -47,8 +56,8 @@
     position: absolute;
     bottom: 0px;
     right: 0px;
-    width: 15.5vw;
-    height: 15.5vw;
+    width: 160px;
+    height: 160px;
     background-color: white;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -58,15 +67,15 @@
     position: absolute;
     top: -2vw;
     left: -2vw;
-    width: 4vw;
-    height: 4vw;
-    font-size: 2vw;
-    border-radius: 4vw;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    border-radius: 50px;
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    line-height: 4vw;
-    border: 0.5vw solid var(--background-color);
+    line-height: 50px;
+    border: 5px solid var(--background-color);
 }
 
 #how-it-works-buttons {
