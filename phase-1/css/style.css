@@ -65,13 +65,14 @@ section .header1 {
 section .header2 {
     margin-top: 0px;
     font-size: 2.5rem; margin-bottom: 10px;
+    letter-spacing: -0.07rem;
 }
 
 section .header3 {
     margin-top: 0px;
     margin-bottom: 30px;
     color: var(--secondary-text-color);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .circle {
