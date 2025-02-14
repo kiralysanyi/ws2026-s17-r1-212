@@ -1,3 +1,5 @@
+/* TODO: fix: misaligned layout when font scaling is set to max in chrome */
+
 footer {
     position: relative;
     line-height: 8.5vw;

@@ -1,3 +1,5 @@
+/* TODO: fix: misaligned layout when font scaling is set to max in chrome */
+
 header {
     background-color: var(--background-color);
     width: 100%;
