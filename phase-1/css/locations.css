@@ -82,6 +82,36 @@
     }
 }
 
+@media screen and (max-width:600px) {
+    #locations {
+        padding-top: 2.25rem;
+        padding-bottom: 1.75rem;
+    }
+
+    #locations .header1 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    #locations .card-container {
+        justify-content: start;
+        justify-items: start;
+        padding-left: 2.5rem;
+        padding-top: 2rem;
+    }
+
+    #locations .card {
+        width: 18rem;
+        height: 17.5rem
+    }
+
+    #locations .button {
+        margin-top: 1.25rem !important;
+        width: 9.5rem !important;
+        height: 2.5rem !important;
+    }
+}
+
 #locations .card .location {
     justify-self: end;
     border-top: 1px solid #cfd9e6;
