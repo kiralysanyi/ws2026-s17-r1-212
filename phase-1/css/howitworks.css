@@ -10,13 +10,36 @@
     flex-direction: column;
 }
 
+@media screen and (max-width:600px) {
+    #how-it-works {
+        padding-top: 2rem;
+        padding-bottom: 2.8rem;
+    }
+
+    #how-it-works-buttons {
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    #how-it-works-buttons button {
+        width: 6rem !important;
+    }
+
+    #how-it-works .card .button {
+        height: 2rem !important;
+        width: 5rem !important;
+        line-height: 2rem !important;
+    }
+}
+
+
 #how-it-works .card-container {
     margin-top: 4rem;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.1rem;
 }
 
 @media screen and (max-width:1000px) {
@@ -24,7 +47,20 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-top: 0.5rem;
+        gap: 1.75rem;
     }
+
+    #how-it-works .card p {
+        font-size: 1rem !important;
+        margin-top: 0.75rem;
+    }
+
+    #how-it-works .card {
+        width: 13rem !important;
+    }
+
+
 }
 
 #how-it-works .card {

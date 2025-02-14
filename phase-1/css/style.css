@@ -98,11 +98,34 @@ section {
 
     section .header2 {
         font-size: 2rem;
+        margin-bottom: 0px;
     }
 
     section .header3 {
         margin-left: auto !important;
         margin-right: auto !important;
         width: 80% !important;
+    }
+
+    .button {
+        padding: 0;
+        height: 2rem;
+        border-radius: 2rem;
+        border: none;
+        background-color: var(--primary-color);
+        color: white;
+        font-size: 0.9rem;
+        width: auto;
+    }
+    
+    .secondary-button {
+        padding: 0;
+        height: 2rem;
+        border-radius: 2rem;
+        border: none;
+        background-color: #232331;
+        color: #c5d2ee;
+        font-size: 0.9rem;
+        width: auto;
     }
 }
