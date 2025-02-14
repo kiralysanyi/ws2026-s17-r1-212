@@ -7,7 +7,7 @@
     align-content: center;
     justify-content: center;
     padding-bottom: 7rem;
-    padding-top: 45px !important;
+    padding-top: 45px;
 }
 
 /* Opening animation */
@@ -96,17 +96,37 @@
     padding: 0;
 }
 
-@media screen and (max-width:1300px) {
+@media screen and (max-width:1100px) {
     #hero {
-        padding-bottom: 15%;
+        padding-top: 3.5rem;
+        padding-bottom: 4.6rem;
     }
 
     #hero-content {
         width: 100%;
     }
 
+    #hero h1 {
+        position: relative;
+        font-size: 2rem !important;
+        animation: 500ms ease-out forwards slide-in;
+        margin-bottom: 0px;
+        line-height: 3rem;
+        font-weight: 700;
+        letter-spacing: -0.05rem;
+    }
+
+    #hero-content p {
+        font-size: 0.85rem;
+        line-height: 1.5rem;
+        width: 90%;
+        margin-top: 1rem;
+    }
+
     #hero-buttons {
+        margin-top: 0;
         width: 100%;
+        gap: 0.5rem;
     }
 
     #hero-buttons button {
@@ -132,14 +152,4 @@
         top: 140% !important;
         border: 100px solid #ffffff09;
     }
-
-    .text-gradient {
-        font-size: 2rem !important;
-    }
-
-    #hero-content p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-
 }
