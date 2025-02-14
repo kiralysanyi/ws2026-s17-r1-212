@@ -67,7 +67,6 @@
 }
 
 @media screen and (max-width: 800px) {
-
     #download {
         justify-content: center;
         align-content: center;
@@ -91,9 +90,47 @@
     }
 
     #download #laundromat {
-        bottom: 0px;
-        left: 10px;
-        transform: translate(0%, 40px);
-        width: calc(100% - 40px);
+        transform: none;
+        width: auto;
+        height: auto;
+        max-width: calc(100% - 40px);
+        border: 3px solid #3d414c;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #download {
+        padding-bottom: 2.25rem;
+    }
+
+    #download .header1 {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    #download .header2 {
+        margin-top: 0 !important;
+        line-height: 2.5rem !important;
+    }
+
+    #download .header3 {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        line-height: 1.5rem !important;
+    }
+
+    #store-buttons-container {
+        width: 100%;
+        height: 2.75rem;
+        gap: 0;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #textcontainer {
+        margin-top: 0 !important;
     }
 }
