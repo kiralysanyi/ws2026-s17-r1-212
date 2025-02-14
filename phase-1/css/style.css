@@ -93,10 +93,14 @@ section {
 
 @media screen and (max-width:600px) {
     section .header1 {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
-    .header3 {
+    section .header2 {
+        font-size: 2rem;
+    }
+
+    section .header3 {
         margin-left: auto !important;
         margin-right: auto !important;
         width: 80% !important;
