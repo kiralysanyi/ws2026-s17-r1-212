@@ -45,6 +45,10 @@ footer img {
 }
 
 @media screen and (max-width:800px) {
+    #footer-links .separator {
+        display: none;
+    }
+
     footer img {
         margin-right: auto;
         margin-left: auto;
@@ -60,7 +64,7 @@ footer img {
     #footer-links {
         flex-direction: column;
         text-align: center;
-        gap: 0px;
+        gap: 1rem;
         border-top: 1px solid rgb(85, 85, 85);
         border-bottom: 1px solid rgb(85, 85, 85);
     }
