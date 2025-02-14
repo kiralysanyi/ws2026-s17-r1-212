@@ -17,15 +17,35 @@
     position: relative;
     margin-top: 3.75rem;
     margin-bottom: auto;
+    margin-left: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 2.25rem;
+}
+
+#download #textcontainer .header1 {
+    line-height: 1.75rem;
+}
+
+#download #textcontainer .header2 {
+    line-height: 2.75rem;
+    margin-bottom: 0;
+}
+
+#download #textcontainer .header3 {
+    margin: 0;
+    width: 35rem;
+    line-height: 2rem;
 }
 
 #download #laundromat {
     position: relative;
     bottom: 0px;
     right: 0px;
-    transform: translate(5%, 15%);
-    max-height: 80%;
-    width: 70%;
+    transform: translate(10%, 20%);
+    height: 30rem;
+    width: 60rem;
     border-radius: 30px;
     border: 10px solid #3d414c;
     object-fit: cover;
@@ -44,10 +64,6 @@
 #store-buttons-container img {
     object-fit: contain;
     max-width: 100%;
-}
-
-#download .header1 {
-    margin-top: 60px;
 }
 
 @media screen and (max-width: 800px) {
