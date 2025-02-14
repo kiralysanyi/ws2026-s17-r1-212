@@ -10,48 +10,38 @@ footer {
     justify-content: center;
     flex-direction: row;
     overflow: hidden;
-    height: 120px;
-    font-size: 15px;
+    height: 9.5rem;
+    font-size: 1rem;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 #footer-links {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 2rem;
     color: #5daaff;
     margin: auto;
+}
+
+#footer-links .separator {
+    color: rgb(94, 100, 129);
 }
 
 #footer-links span {
     position: relative;
 }
 
-#footer-links span::after {
-    content: "";
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 2px;
-    height: 20px;
-    background-color: rgb(85, 85, 85);
-}
-
-#footer-links span:last-child::after {
-    display: none;
-}
-
 #copyright {
     justify-self: end;
     margin-left: auto;
-    margin-right: 50px;
 }
 
 footer img {
     justify-self: flex-start;
     height: 23%;
     margin-right: auto;
-    margin-left: 50px;
+    margin-left: 0px
 }
 
 @media screen and (max-width:800px) {
