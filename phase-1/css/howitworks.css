@@ -30,6 +30,10 @@
         width: 5rem !important;
         line-height: 2rem !important;
     }
+
+    #how-it-works .card-container {
+        margin-top: 2.25rem !important;
+    }
 }
 
 
@@ -59,8 +63,6 @@
     #how-it-works .card {
         width: 13rem !important;
     }
-
-
 }
 
 #how-it-works .card {

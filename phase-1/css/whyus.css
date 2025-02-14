@@ -72,18 +72,40 @@
 }
 
 @media screen and (max-width: 600px) {
+    #why-us {
+        padding-top: 3.25rem;
+        padding-bottom: 0.75rem;
+    }
+
+    #why-us .header1 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #why-us .header2 {
+        margin-top: 0;
+        line-height: 2.5rem;
+    }
+
+    #why-us .header3 {
+        margin-bottom: 0;
+    }
+
     .feature p {
         font-size: 1rem;
-        max-width: 90%;
+        line-height: 1.2rem;
+        max-width: 95%;
     }
 
     .feature h1 {
         max-width: 100%;
         font-size: 1.3rem;
+        line-height: 1.2rem;
     }
 
     .features {
         width: 95%;
         padding-left: 0px;
+        margin-top: 0;
     }
 }
