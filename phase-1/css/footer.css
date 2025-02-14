@@ -64,9 +64,15 @@ footer img {
     #footer-links {
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
+        gap: 0;
         border-top: 1px solid rgb(85, 85, 85);
         border-bottom: 1px solid rgb(85, 85, 85);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    #footer-links span {
+        line-height: 1.6rem;
     }
 
     #footer-links span::after {
@@ -76,7 +82,7 @@ footer img {
     #copyright {
         margin-left: auto;
         margin-right: auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
