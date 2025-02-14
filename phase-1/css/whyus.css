@@ -20,7 +20,7 @@
     width: 65%;
     column-gap: 2.5rem;
     padding-left: 1.5rem;
-    height: 15.3rem;
+    min-height: 15.3rem;
 }
 
 @media screen and (max-width:1100px) {
@@ -84,5 +84,6 @@
 
     .features {
         width: 95%;
+        padding-left: 0px;
     }
 }
