@@ -1,1 +1,3 @@
-# ws2026-s17-r1-212
+candid-heliotrope-29436e.netlify.app
+212
+Király Sándor
