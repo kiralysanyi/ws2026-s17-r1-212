@@ -1,0 +1,30 @@
+import { Fragment } from "react"
+import CheckSvg from "../assets/check.svg"
+import MaximizeSvg from "../assets/maximize.svg"
+
+function Header({ currentStep, completedSteps, onMaximizeClick }) {
+    const steps = [1, 2, 3, 4]
+
+    return (
+        <>
+            <header className="header">
+                <h1>Register a new location</h1>
+                <div className="steps">
+                    {steps.map((num) => (
+                        <Fragment key={num}>
+                            <button className={`step ${currentStep === num ? 'current' : ''} ${completedSteps >= num ? 'done' : ''}`}>{num}</button>
+                            {num != steps.length ? <div className={`step-divider ${completedSteps >= num ? '' : 'dashed'}`}></div> : ""}
+                        </Fragment>
+                    ))}
+
+                </div>
+
+                <button onClick={onMaximizeClick} className="fullscreen-btn">
+                    <img src={MaximizeSvg} alt="Maximize" />
+                </button>
+            </header>
+        </>
+    )
+}
+
+export default Header
