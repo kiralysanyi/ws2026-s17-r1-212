@@ -2,6 +2,8 @@ import { useState, useRef, Fragment } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Part1 from './components/Form/Part1'
+import Part2 from './components/Form/Part2'
+import Part3 from './components/Form/Part3'
 
 function App() {
   const [isFullScreen, setIsFullScreen] = useState(false)
@@ -9,6 +11,9 @@ function App() {
   const [completedSteps, setCompletedSteps] = useState(0)
   const [currentStep, setCurrentStep] = useState(1)
   const [missingValues, setMissingValues] = useState([])
+
+  //set title
+  document.title = "Register a new location | Sudsy"
 
 
   const onMaximizeClick = () => {
@@ -55,7 +60,7 @@ function App() {
     "address": "",
     "from": "",
     "to": "",
-    "openAt": "",
+    "openAt": "Every Day",
     "freeWiFi": false,
     "accessibleEntry": false,
     "LoungeArea": false,
@@ -66,23 +71,50 @@ function App() {
 
 
   const goNext = () => {
-    let missing = []
-    for (let i in requiredValues1) {
-      if (formData[requiredValues1[i]] == undefined || formData[requiredValues1[i]] == "") {
-        missing.push(requiredValues1[i])
-      }
+    //goNext handler for step 1
+    if (currentStep == 1) {
+      return (() => {
+
+        if (completedSteps > 0) {
+          setCurrentStep(currentStep + 1)
+          return
+        }
+
+        let missing = []
+        for (let i in requiredValues1) {
+          if (formData[requiredValues1[i]] == undefined || formData[requiredValues1[i]] == "") {
+            missing.push(requiredValues1[i])
+          }
+        }
+
+        if (missing.length > 0) {
+          setMissingValues(missing)
+          return;
+        } else {
+          if (currentStep >= completedSteps) {
+            setCompletedSteps(currentStep);
+            setCurrentStep(currentStep + 1)
+          }
+        }
+      })()
     }
 
-    if (missing.length > 0) {
-      setMissingValues(missing)
-      return;
+
+    //goNext handler for step 2
+    if (currentStep == 2) {
+      return (() => {
+        setCompletedSteps(currentStep)
+        setCurrentStep(currentStep + 1)
+      })()
     }
 
-    if (currentStep + 1 > completedSteps + 1) {
-      return;
+    //goNext handler for step 3
+    if (currentStep == 3) {
+      return (() => {
+        setCompletedSteps(currentStep)
+        setCurrentStep(currentStep + 1)
+      })()
     }
-
-    setCurrentStep(currentStep + 1)
   }
 
   const goBack = () => {
@@ -111,6 +143,21 @@ function App() {
                         [key]: value,
                       }))
                     }}></Part1>
+                  )
+
+                case 2:
+                  return (
+                    <Part2></Part2>
+                  )
+
+                case 3:
+                  return (
+                    <Part3></Part3>
+                  )
+
+                case 4:
+                  return (
+                    <Part4></Part4>
                   )
 
                 default:
