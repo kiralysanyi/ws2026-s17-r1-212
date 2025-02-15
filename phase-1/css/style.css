@@ -37,7 +37,8 @@ body {
 }
 
 .button {
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     height: 3.5rem;
     border-radius: 3.5rem;
     border: none;
@@ -45,10 +46,12 @@ body {
     color: white;
     font-size: 1rem;
     width: auto;
+    line-height: 3.5rem;
 }
 
 .secondary-button {
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     height: 3.5rem;
     border-radius: 3.5rem;
     border: none;
@@ -56,6 +59,7 @@ body {
     color: #c5d2ee;
     font-size: 1rem;
     width: auto;
+    line-height: 3.5rem;
 }
 
 section .header1 {
@@ -117,6 +121,7 @@ section {
         color: white;
         font-size: 0.9rem;
         width: auto;
+        line-height: 2rem;
     }
     
     .secondary-button {
@@ -128,5 +133,6 @@ section {
         color: #c5d2ee;
         font-size: 0.9rem;
         width: auto;
+        line-height: 2rem;
     }
 }
