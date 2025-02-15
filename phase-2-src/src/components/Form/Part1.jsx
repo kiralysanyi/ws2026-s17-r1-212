@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import TextField from "../TextField";
 
-function Part1({ formData, onChange, missingValues = []}) {
+function Part1({ formData, onChange, missingValues = [] }) {
     const onValueChange = (key, value) => {
         onChange(key, value)
     }
@@ -16,7 +16,8 @@ function Part1({ formData, onChange, missingValues = []}) {
             <div className="input-row">
                 <div className="input-group">
                     <label htmlFor="textarea">Desctiption</label>
-                    <textarea id="textarea" rows="5" value={formData.description} onChange={(event) => { onValueChange("description", event.target.value) }}></textarea>
+                    <textarea id="textarea" className={`${missingValues.includes("description") ? "error" : ""}`} rows="5" value={formData.description} onChange={(event) => { onValueChange("description", event.target.value) }}></textarea>
+                    {missingValues.includes("description") ? <span className="input-error">This field is required</span> : ""}
                 </div>
             </div>
 
@@ -26,18 +27,30 @@ function Part1({ formData, onChange, missingValues = []}) {
                 <TextField name="Address" id="address" showError={missingValues.includes("address")} value={formData.address} onChange={(event) => { onValueChange("address", event.target.value) }}></TextField>
             </div>
 
-            <h2>Subtitle inside the form</h2>
-
+            <hr />
+            <h3>Operational hours</h3>
             <div className="input-group">
                 <label htmlFor="select">Open At</label>
-                <select value={formData.openAt} onChange={(event) => { onValueChange("openAt", event.target.value) }} id="select">
-                    <option value="Every Day">Every Day</option>
-                    <option value="Weekdays">Weekdays</option>
-                    <option value="Weekends">Weekends</option>
-                </select>
+                <div className="input-row">
+                    <select value={formData.openAt} onChange={(event) => { onValueChange("openAt", event.target.value) }} id="select">
+                        <option value="Every Day">Every Day</option>
+                        <option value="Weekdays">Weekdays</option>
+                        <option value="Weekends">Weekends</option>
+                    </select>
+                </div>
+                <div className="input-row">
+                    <div className="input-group">
+                        <label htmlFor="from">From</label>
+                        <input className={`${missingValues.includes("from")? "error": ""}`} value={formData.from} onChange={(event) => {onValueChange("from", event.target.value)}} type="time" id="from" />
+                        {missingValues.includes("from")? <span className="input-error">This field is required</span>: ""}
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="to">To</label>
+                        <input className={`${missingValues.includes("to")? "error": ""}`} value={formData.to} onChange={(event) => {onValueChange("to", event.target.value)}} type="time" id="to" />
+                        {missingValues.includes("to")? <span className="input-error">This field is required</span>: ""}
+                    </div>
+                </div>
             </div>
-
-            <hr />
         </Fragment>
     )
 }

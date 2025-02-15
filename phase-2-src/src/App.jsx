@@ -46,24 +46,30 @@ function App() {
 }
 */
 
-  const requiredValues = ["name", "description", "postalCode", "city", "address", "from", "to", "openAt"]
+  const requiredValues1 = ["name", "description", "postalCode", "city", "address", "from", "to", "openAt"]
   const [formData, setFormData] = useState({
     "name": "",
     "description": "",
-    "postalCode": 0,
+    "postalCode": "",
     "city": "",
     "address": "",
     "from": "",
     "to": "",
     "openAt": "",
+    "freeWiFi": false,
+    "accessibleEntry": false,
+    "LoungeArea": false,
+    "backgroundMusic": false,
+    "customerService": false,
+    "parking": "Easy"
   })
 
 
   const goNext = () => {
     let missing = []
-    for (let i in requiredValues) {
-      if (formData[requiredValues[i]] == undefined || formData[requiredValues[i]] == "") {
-        missing.push(requiredValues[i])
+    for (let i in requiredValues1) {
+      if (formData[requiredValues1[i]] == undefined || formData[requiredValues1[i]] == "") {
+        missing.push(requiredValues1[i])
       }
     }
 
