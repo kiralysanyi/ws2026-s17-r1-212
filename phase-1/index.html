@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/download.css">
     <link rel="stylesheet" href="css/locations.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/hamburger-menu.css">
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/svg">
     <meta name="description"
         content="WHO WE ARE
@@ -36,8 +37,36 @@
             <a href="#download">Download</a>
             <button class="button" style="width: 6rem;">Log In</button>
         </div>
-        <img src="./assets/hamburger-icon.svg" alt="hamburger-icon" id="hamburger-icon">
+        <label for="burger-toggle">
+            <img src="./assets/hamburger-icon.svg" alt="hamburger-icon" id="hamburger-icon">
+        </label>
     </header>
+
+    <!-- (ham)burger(-menu) -->
+    <input type="checkbox" id="burger-toggle" />
+    <div id="hamburger-menu-container">
+        <label for="burger-toggle">
+            <div id="burger-close-overlay"></div>
+        </label>
+        <div id="hamburger-menu">
+            <div id="hamburger-head">
+                <img src="./assets/sudsy-logo.svg" alt="sudsy-logo" id="burger-sudsy-logo">
+                <label for="burger-toggle">
+                    <img src="./assets/close-icon.svg" alt="close-menu" id="burger-close">
+                </label>
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#why-us">Why Sudsy</a>
+                <a href="#locations">Locations</a>
+            </nav>
+            <div id="burger-buttons">
+                <button class="button" style="width: 6rem;">Log In</button>
+                <a href="#download">Download</a>
+            </div>
+        </div>
+    </div>
     <!-- Main content begins here -->
     <main>
         <!-- Hero -->
