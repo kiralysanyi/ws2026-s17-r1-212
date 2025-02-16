@@ -25,10 +25,6 @@ function App() {
     setIsFullScreen(!isFullScreen)
   }
 
-  const navigateSteps = (step) => {
-    setCurrentStep(step)
-  }
-
   /*
   Expected form data
 {
@@ -94,6 +90,21 @@ function App() {
   }
 
   const [errors, setErrors] = useState({})
+
+  const navigateSteps = (step) => {
+    //validate if current step is 1
+    if (currentStep == 1) {
+      const validatorResult = validate(formData)
+
+      if (Object.keys(validatorResult).length > 0) {
+        setErrors(validatorResult)
+        return;
+      }
+    }
+
+    setCurrentStep(step)
+  }
+
 
   const goNext = () => {
     //goNext handler for step 1
