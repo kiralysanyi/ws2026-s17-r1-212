@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ws2026-s17-r1-212</title>
+    <style>
+        /* Suboptimal design, I will do something about this later */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        .link-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            max-height: 100%;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+            font-size: 4rem;
+            background-color: rgb(75, 75, 75);
+        }
+    </style>
 </head>
 <body>
-    <div>
+    <div class="link-container">
         <a href="/phase-1/index.html">phase 1</a>
-        <a href="#">phase 2 (not ready)</a>
+        <a href="/phase-2/index.html">phase 2</a>
     </div>
 </body>
 </html>
