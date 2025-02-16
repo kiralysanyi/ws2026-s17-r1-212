@@ -8,8 +8,6 @@ import Part3 from './components/Form/Part3'
 function App() {
   const [isFullScreen, setIsFullScreen] = useState(false)
   const containerRef = useRef()
-  const [completedSteps, setCompletedSteps] = useState(0)
-  const [currentStep, setCurrentStep] = useState(1)
   const [missingValues, setMissingValues] = useState([])
 
   //set title
@@ -51,8 +49,7 @@ function App() {
 }
 */
 
-  const requiredValues1 = ["name", "description", "postalCode", "city", "address", "from", "to", "openAt"]
-  const [formData, setFormData] = useState({
+  let savedFormData = {
     "name": "",
     "description": "",
     "postalCode": "",
@@ -67,7 +64,29 @@ function App() {
     "backgroundMusic": false,
     "customerService": false,
     "parking": "Easy"
-  })
+  };
+
+  let savedData;
+  try {
+    savedData = JSON.parse(window.name)
+    savedFormData = savedData["formdata"]
+  } catch (error) {
+    console.log("No saved form data found.");
+  }
+
+  const requiredValues1 = ["name", "description", "postalCode", "city", "address", "from", "to", "openAt"]
+  const [formData, setFormData] = useState(savedFormData)
+  const [completedSteps, setCompletedSteps] = useState(savedData["completed"] ? savedData["completed"] : 0)
+  const [currentStep, setCurrentStep] = useState(savedData["current"] ? savedData["current"] : 1)
+
+  window.name = JSON.stringify({ formdata: formData, completed: completedSteps, current: currentStep })
+
+  const updateFormData = (key, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      [key]: value,
+    }))
+  }
 
 
   const goNext = () => {
@@ -121,8 +140,6 @@ function App() {
     setCurrentStep(currentStep - 1)
   }
 
-
-
   return (
     <>
       <article ref={containerRef} className="container">
@@ -138,10 +155,7 @@ function App() {
                       if (missingValues.includes(key)) {
                         setMissingValues(missingValues.filter((item => item != key)))
                       }
-                      setFormData((prev) => ({
-                        ...prev,
-                        [key]: value,
-                      }))
+                      updateFormData(key, value)
                     }}></Part1>
                   )
 
