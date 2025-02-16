@@ -43,9 +43,16 @@ function isWallNearby(col, row, cells) {
     return false;
 }
 
-function Part2() {
-    const [cells, setCells] = useState(gridTemplateJson)
+let savedFloorPlan = gridTemplateJson;
+try {
+    savedFloorPlan = JSON.parse(window.name)["floorplanner"]
+    savedFloorPlan = savedFloorPlan ? savedFloorPlan : gridTemplateJson
+} catch (error) {
+    console.log("No saved data found for floor planner");
+}
 
+function Part2({ onChange }) {
+    const [cells, setCells] = useState(savedFloorPlan)
     const setCell = (row, col, type) => {
         setCells((prev) => (
             {
@@ -57,6 +64,8 @@ function Part2() {
             }
         ))
     }
+
+    onChange(cells)
 
     console.log("Layout: ", cells)
 

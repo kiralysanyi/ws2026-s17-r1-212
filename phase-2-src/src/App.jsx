@@ -78,8 +78,13 @@ function App() {
   const [formData, setFormData] = useState(savedFormData)
   const [completedSteps, setCompletedSteps] = useState(savedData["completed"] ? savedData["completed"] : 0)
   const [currentStep, setCurrentStep] = useState(savedData["current"] ? savedData["current"] : 1)
+  let floorPlannerData = savedData["floorplanner"] ? savedData["floorplanner"] : null;
 
-  window.name = JSON.stringify({ formdata: formData, completed: completedSteps, current: currentStep })
+  const saveData = () => {
+    window.name = JSON.stringify({ formdata: formData, completed: completedSteps, current: currentStep, floorplanner: floorPlannerData })
+  }
+
+  saveData()
 
   const updateFormData = (key, value) => {
     setFormData((prev) => ({
@@ -161,7 +166,7 @@ function App() {
 
                 case 2:
                   return (
-                    <Part2></Part2>
+                    <Part2 onChange={(cells) => { floorPlannerData = cells; saveData() }}></Part2>
                   )
 
                 case 3:
