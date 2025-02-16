@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Part1 from './components/Form/Part1'
 import Part2 from './components/Form/Part2'
 import Part3 from './components/Form/Part3'
+import validate from './Validator'
 
 function App() {
   const [isFullScreen, setIsFullScreen] = useState(false)
@@ -66,7 +67,7 @@ function App() {
     "parking": "Easy"
   };
 
-  let savedData;
+  let savedData = {};
   try {
     savedData = JSON.parse(window.name)
     savedFormData = savedData["formdata"]
@@ -74,7 +75,6 @@ function App() {
     console.log("No saved form data found.");
   }
 
-  const requiredValues1 = ["name", "description", "postalCode", "city", "address", "from", "to", "openAt"]
   const [formData, setFormData] = useState(savedFormData)
   const [completedSteps, setCompletedSteps] = useState(savedData["completed"] ? savedData["completed"] : 0)
   const [currentStep, setCurrentStep] = useState(savedData["current"] ? savedData["current"] : 1)
@@ -93,33 +93,29 @@ function App() {
     }))
   }
 
+  const [errors, setErrors] = useState({})
 
   const goNext = () => {
     //goNext handler for step 1
     if (currentStep == 1) {
       return (() => {
+        const validatorResult = validate(formData)
+
+        if (Object.keys(validatorResult).length > 0) {
+          setErrors(validatorResult)
+          return;
+        }
 
         if (completedSteps > 0) {
           setCurrentStep(currentStep + 1)
           return
         }
 
-        let missing = []
-        for (let i in requiredValues1) {
-          if (formData[requiredValues1[i]] == undefined || formData[requiredValues1[i]] == "") {
-            missing.push(requiredValues1[i])
-          }
+        if (currentStep >= completedSteps) {
+          setCompletedSteps(currentStep);
+          setCurrentStep(currentStep + 1)
         }
 
-        if (missing.length > 0) {
-          setMissingValues(missing)
-          return;
-        } else {
-          if (currentStep >= completedSteps) {
-            setCompletedSteps(currentStep);
-            setCurrentStep(currentStep + 1)
-          }
-        }
       })()
     }
 
@@ -156,10 +152,8 @@ function App() {
               switch (currentStep) {
                 case 1:
                   return (
-                    <Part1 missingValues={missingValues} formData={formData} onChange={(key, value) => {
-                      if (missingValues.includes(key)) {
-                        setMissingValues(missingValues.filter((item => item != key)))
-                      }
+                    <Part1 errors={errors} missingValues={missingValues} formData={formData} onChange={(key, value) => {
+                      //run validator after next button has been pressed at least once
                       updateFormData(key, value)
                     }}></Part1>
                   )
