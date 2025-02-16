@@ -82,7 +82,17 @@ function App() {
 
   saveData()
 
+  const [realtimeValidation, setRealtimeValidation] = useState(false)
+
   const updateFormData = (key, value) => {
+    const newFormData = formData;
+    newFormData[key] = value;
+
+    if (currentStep == 1 && realtimeValidation) {
+      const validatorResult = validate(newFormData)
+      setErrors(validatorResult)
+    }
+
     setFormData((prev) => ({
       ...prev,
       [key]: value,
@@ -98,7 +108,11 @@ function App() {
 
       if (Object.keys(validatorResult).length > 0) {
         setErrors(validatorResult)
+        setRealtimeValidation(true)
         return;
+      } else {
+        setErrors({})
+        setRealtimeValidation(false)
       }
     }
 
@@ -114,7 +128,11 @@ function App() {
 
         if (Object.keys(validatorResult).length > 0) {
           setErrors(validatorResult)
+          setRealtimeValidation(true)
           return;
+        } else {
+          setErrors({})
+          setRealtimeValidation(false)
         }
 
         if (completedSteps > 0) {
@@ -164,7 +182,6 @@ function App() {
                 case 1:
                   return (
                     <Part1 errors={errors} missingValues={missingValues} formData={formData} onChange={(key, value) => {
-                      //run validator after next button has been pressed at least once
                       updateFormData(key, value)
                     }}></Part1>
                   )

@@ -18,7 +18,7 @@ function validate(formdata) {
 
     //check name
     if (formdata.name == undefined || formdata.name.trim() === "") {
-        errors["name"] = "This field is required"
+        errors["name"] = "Required"
     } else {
         if (formdata.name.length < 3 || formdata.name.length > 32) {
             errors["name"] = "Name has to be between 3-32 characters."
@@ -27,7 +27,7 @@ function validate(formdata) {
 
     //check description
     if (formdata.description == undefined || formdata.description.trim() === "") {
-        errors["description"] = "This field is required"
+        errors["description"] = "Required"
     } else {
         if (formdata.description.length < 10 || formdata.description.length > 256) {
             errors["description"] = "Name has to be between 10-256 characters."
@@ -36,7 +36,7 @@ function validate(formdata) {
 
     //check postalCode
     if (formdata.postalCode == undefined || formdata.postalCode.trim() === "") {
-        errors["postalCode"] = "This field is required"
+        errors["postalCode"] = "Required"
     } else {
         if (!validatePostalCode(formdata.postalCode.trim())) {
             errors["postalCode"] = "Postal code should be a 4 digit number."
@@ -45,7 +45,7 @@ function validate(formdata) {
 
     //check city
     if (formdata.city == undefined || formdata.city.trim() === "") {
-        errors["city"] = "This field is required"
+        errors["city"] = "Required"
     } else {
         if (formdata.city.length < 3 || formdata.city.length > 32) {
             errors["city"] = "City value has to be between 3-32 characters."
@@ -54,7 +54,7 @@ function validate(formdata) {
 
     //check address
     if (formdata.address == undefined || formdata.address.trim() === "") {
-        errors["address"] = "This field is required"
+        errors["address"] = "Required"
     } else {
         if (formdata.address.length < 3 || formdata.address.length > 128) {
             errors["address"] = "Address value has to be between 3-128 characters."
@@ -63,12 +63,12 @@ function validate(formdata) {
 
     //check from (operational hours)
     if (formdata.from == undefined || formdata.from.trim() === "") {
-        errors["from"] = "This field is required"
+        errors["from"] = "Required"
     }
 
     //check to (operational hours)
     if (formdata.to == undefined || formdata.to.trim() === "") {
-        errors["to"] = "This field is required"
+        errors["to"] = "Required"
     }
 
     return errors;
