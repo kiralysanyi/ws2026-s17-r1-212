@@ -257,7 +257,7 @@ hr {
 
 .grid {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(5, 1fr);
   border: 1px solid #bbb;
   border-radius: 2px;
@@ -313,6 +313,9 @@ hr {
 }
 .grid-item.empty {
   opacity: 0.75;
+}
+.grid-item.dragover{
+  opacity: 0.25;
 }
 .dnd-row {
   display: flex;
