@@ -4,7 +4,9 @@ import Header from './components/Header'
 import Part1 from './components/Form/Part1'
 import Part2 from './components/Form/Part2'
 import Part3 from './components/Form/Part3'
+import Part4 from './components/Form/Part4'
 import validate from './Validator'
+import GridValidator from './GridValidator'
 
 function App() {
   const [isFullScreen, setIsFullScreen] = useState(false)
@@ -84,6 +86,16 @@ function App() {
 
   const [realtimeValidation, setRealtimeValidation] = useState(false)
 
+  const gridUpdated = () => {
+    if (currentStep == 2 && realtimeValidation) {
+      if (GridValidator(floorPlannerData)) {
+        setShowGridError(false)
+      } else {
+        setShowGridError(true)
+      }
+    }
+  }
+
   const updateFormData = (key, value) => {
     const newFormData = formData;
     newFormData[key] = value;
@@ -119,6 +131,8 @@ function App() {
     setCurrentStep(step)
   }
 
+  const [showGridError, setShowGridError] = useState(false)
+
 
   const goNext = () => {
     //goNext handler for step 1
@@ -152,8 +166,18 @@ function App() {
     //goNext handler for step 2
     if (currentStep == 2) {
       return (() => {
-        setCompletedSteps(currentStep)
-        setCurrentStep(currentStep + 1)
+        //validate grid layout
+        if (GridValidator(floorPlannerData)) {
+          setRealtimeValidation(false)
+          setCompletedSteps(currentStep)
+          setCurrentStep(currentStep + 1)
+        } else {
+          setShowGridError(true);
+          setRealtimeValidation(true)
+          return;
+        }
+
+
       })()
     }
 
@@ -188,7 +212,7 @@ function App() {
 
                 case 2:
                   return (
-                    <Part2 onChange={(cells) => { floorPlannerData = cells; saveData() }}></Part2>
+                    <Part2 showError={showGridError} onChange={(cells) => { floorPlannerData = cells; saveData(); gridUpdated() }}></Part2>
                   )
 
                 case 3:

@@ -3,45 +3,21 @@
 import WashingMachineSvg from "../../assets/washing-machine.svg"
 import SpaceSvg from "../../assets/space.svg"
 import ArmchairSvg from "../../assets/armchair.svg"
+import AlertSvg from "../../assets/alert.svg"
 
 import { Fragment, useState } from "react"
 import GridCell from "../GridCell";
 
-const gridColumns = 5;
-const gridRows = 6
+import { gridColumns, gridRows } from "../../gridconf";
 
 //generate json based on the above values
 const gridTemplateJson = {}
 Array.from({ length: gridColumns }).map((_, col) => {
     gridTemplateJson[col] = {}
     Array.from({ length: gridRows }).map((_, row) => {
-        gridTemplateJson[col][row] = "Empty"
+        gridTemplateJson[col][row] = "-"
     })
 })
-//simple function to determine if the cell is next to a wall
-function isWallNearby(col, row, cells) {
-    //check for always allowed cells
-    if (
-        row === 0 ||
-        row === gridRows - 1 ||
-        col === 0 ||
-        col === gridColumns - 1
-    ) {
-        return true;
-    }
-
-    //check nearby cells for walls
-    if (
-        (cells[col - 1]?.[row] === "Wall") ||
-        (cells[col + 1]?.[row] === "Wall") ||
-        (cells[col]?.[row - 1] === "Wall") ||
-        (cells[col]?.[row + 1] === "Wall")
-    ) {
-        return true;
-    }
-
-    return false;
-}
 
 let savedFloorPlan = gridTemplateJson;
 try {
@@ -51,7 +27,7 @@ try {
     console.log("No saved data found for floor planner");
 }
 
-function Part2({ onChange }) {
+function Part2({ onChange, showError }) {
     const [cells, setCells] = useState(savedFloorPlan)
     const setCell = (row, col, type) => {
         setCells((prev) => (
@@ -104,12 +80,19 @@ function Part2({ onChange }) {
                 </div>
             </div>
 
+            {showError ? <div className="alert">
+                <img src={AlertSvg} alt="Alert" />
+                <span>Washers or Dryers can only be next to a wall.</span>
+            </div> : ""}
+
+
+
             <div className="grid">
                 {
                     // render grid
                     Array.from({ length: gridRows }).map((_, row) => (
                         Array.from({ length: gridColumns }).map((_, col) => (
-                            <GridCell key={`${col}-${row}`} row={row} col={col} type={cells[col][row]} allowPlacement={isWallNearby(col, row, cells)} onClear={
+                            <GridCell key={`${col}-${row}`} row={row} col={col} type={cells[col][row]} onClear={
                                 setCell
                             } onPlacedElement={setCell}></GridCell>
                         ))
