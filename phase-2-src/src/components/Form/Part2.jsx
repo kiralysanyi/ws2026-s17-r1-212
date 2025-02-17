@@ -74,8 +74,8 @@ function Part2({ onChange, showError }) {
                     <img src={ArmchairSvg} alt="Waiting Area" />
                     <span>Waiting Area</span>
                 </div>
-                <div className="grid-item" draggable onDragStart={(e) => { handleDragStart(e, "Folding Tables") }}>
-                    <img src={SpaceSvg} alt="Folding Tables" />
+                <div className="grid-item" draggable onDragStart={(e) => { handleDragStart(e, "Folding Table") }}>
+                    <img src={SpaceSvg} alt="Folding Table" />
                     <span>Folding Table</span>
                 </div>
             </div>
