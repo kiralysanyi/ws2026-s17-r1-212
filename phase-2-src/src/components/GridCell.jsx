@@ -13,23 +13,14 @@ function GridCell({ type, onPlacedElement, row, col, onClear }) {
     type = type.toLowerCase()
     const [dragOver, setDragOver] = useState(false)
 
-    //TODO: do something about these if statements because there has to be a better way to do this
-    let icon = null;
-    if (type.includes("washer")) {
-        icon = WashingMachineSvg;
-    }
+    const iconMap = {
+        "Waiting Area": ArmchairSvg,
+        "Folding Table": SpaceSvg,
+    };
 
-    if (type.includes("dryer")) {
-        icon = WashingMachineSvg;
-    }
-
-    if (type == "Waiting Area") {
-        icon = ArmchairSvg
-    }
-
-    if (type == "Folding Table") {
-        icon = SpaceSvg
-    }
+    const icon = type.includes("washer") || type.includes("dryer")
+        ? WashingMachineSvg
+        : iconMap[type] || null;
 
     const onDragOver = (e) => {
         e.preventDefault();
