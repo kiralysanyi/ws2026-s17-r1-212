@@ -111,6 +111,7 @@ function App() {
   }
 
   const [errors, setErrors] = useState({})
+  const [showGridError, setShowGridError] = useState(false)
 
   const navigateSteps = (step) => {
     //validate if current step is 1
@@ -127,10 +128,21 @@ function App() {
       }
     }
 
+    if (currentStep == 2) {
+      if (GridValidator(floorPlannerData)) {
+        setRealtimeValidation(false)
+        setShowGridError(false)
+      } else {
+        setShowGridError(true);
+        setRealtimeValidation(true)
+        return;
+      }
+    }
+
     setCurrentStep(step)
   }
 
-  const [showGridError, setShowGridError] = useState(false)
+
 
 
   const goNext = () => {
