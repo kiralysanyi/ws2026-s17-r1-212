@@ -11,7 +11,6 @@ import GridValidator from './GridValidator'
 function App() {
   const [isFullScreen, setIsFullScreen] = useState(false)
   const containerRef = useRef()
-  const [missingValues, setMissingValues] = useState([])
 
   //set title
   document.title = "Register a new location | Sudsy"
@@ -205,7 +204,7 @@ function App() {
               switch (currentStep) {
                 case 1:
                   return (
-                    <Part1 errors={errors} missingValues={missingValues} formData={formData} onChange={(key, value) => {
+                    <Part1 errors={errors} formData={formData} onChange={(key, value) => {
                       updateFormData(key, value)
                     }}></Part1>
                   )
