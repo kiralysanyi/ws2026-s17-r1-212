@@ -208,7 +208,7 @@ function App() {
   return (
     <>
       <article ref={containerRef} className="container">
-        <Header onNavigate={navigateSteps} currentStep={currentStep} completedSteps={completedSteps} onMaximizeClick={onMaximizeClick} ></Header>
+        <Header disabled={currentStep == 4 ? true : false} onNavigate={navigateSteps} currentStep={currentStep} completedSteps={completedSteps} onMaximizeClick={onMaximizeClick} ></Header>
         <main className="main">
           {
             //render form part
@@ -240,10 +240,10 @@ function App() {
             })()
           }
         </main>
-        <footer className="footer">
+        {currentStep != 4 ? <footer className="footer">
           <button className="btn" onClick={goBack} disabled={currentStep <= 1}>Back</button>
           <button className="btn" onClick={goNext}>Next</button>
-        </footer>
+        </footer> : ""}
       </article>
     </>
   )
