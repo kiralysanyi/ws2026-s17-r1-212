@@ -14,8 +14,8 @@ function GridCell({ type, onPlacedElement, row, col, onClear }) {
     const [dragOver, setDragOver] = useState(false)
 
     const iconMap = {
-        "Waiting Area": ArmchairSvg,
-        "Folding Table": SpaceSvg,
+        "waiting area": ArmchairSvg,
+        "folding table": SpaceSvg,
     };
 
     const icon = type.includes("washer") || type.includes("dryer")
