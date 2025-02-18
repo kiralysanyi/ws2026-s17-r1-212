@@ -40,7 +40,7 @@ function App() {
 
 "freeWiFi": false,
 "accessibleEntry": true,
-"LoungeArea": true,
+"loungeArea": true,
 "backgroundMusic": true,
 "customerService": false,
 "parking":"Medium"
@@ -58,7 +58,7 @@ function App() {
     "openAt": "Every Day",
     "freeWiFi": false,
     "accessibleEntry": false,
-    "LoungeArea": false,
+    "loungeArea": false,
     "backgroundMusic": false,
     "customerService": false,
     "parking": "Easy"
@@ -216,9 +216,7 @@ function App() {
               switch (currentStep) {
                 case 1:
                   return (
-                    <Part1 errors={errors} formData={formData} onChange={(key, value) => {
-                      updateFormData(key, value)
-                    }}></Part1>
+                    <Part1 errors={errors} formData={formData} onChange={updateFormData}></Part1>
                   )
 
                 case 2:
@@ -228,7 +226,7 @@ function App() {
 
                 case 3:
                   return (
-                    <Part3></Part3>
+                    <Part3 onChange={updateFormData}></Part3>
                   )
 
                 case 4:
