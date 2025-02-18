@@ -226,7 +226,7 @@ function App() {
 
                 case 3:
                   return (
-                    <Part3 onChange={updateFormData}></Part3>
+                    <Part3 formData={formData} onChange={updateFormData}></Part3>
                   )
 
                 case 4:
