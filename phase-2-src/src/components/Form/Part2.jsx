@@ -30,6 +30,7 @@ try {
 function Part2({ onChange, showError }) {
     const [cells, setCells] = useState(savedFloorPlan)
     const setCell = (row, col, type) => {
+        savedFloorPlan[col][row] = type;
         setCells((prev) => (
             {
                 ...prev,
