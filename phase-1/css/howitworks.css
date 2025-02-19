@@ -203,8 +203,14 @@
     0% {
         stroke-dashoffset: 0;
     }
-    50% {
+    10% {
         stroke-dashoffset: var(--length);
+    }
+    10.01% {
+        stroke-dashoffset: calc(var(--length) * -1);
+    }
+    70% {
+        stroke-dashoffset: calc(var(--length) * -1);
     }
     100% {
         stroke-dashoffset: 0;
@@ -238,6 +244,10 @@
     }
 }
 
+.mobileonly {
+    display: none;
+}
+
 /* 3rd card related stuff */
 #card-start:hover #washer-rotating-part {
     transform-origin: 45.5px 49.5px;
@@ -245,6 +255,9 @@
 }
 
 @media screen and (max-width:600px) {
+    .mobileonly {
+        display: block;
+    }
     #card-start:hover #washer-rotating-part {
         transform-origin: 45.5px 49.5px;
         animation: none;
