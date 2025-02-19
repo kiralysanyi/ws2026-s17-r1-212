@@ -21,7 +21,7 @@
         margin-bottom: 0.5rem !important;
     }
 
-    #how-it-works-buttons button {
+    #how-it-works-buttons a {
         width: 6rem !important;
     }
 
@@ -125,7 +125,7 @@
     margin-bottom: 1.75rem;
 }
 
-#how-it-works-buttons button {
+#how-it-works-buttons a {
     width: 7.5rem;
 }
 
