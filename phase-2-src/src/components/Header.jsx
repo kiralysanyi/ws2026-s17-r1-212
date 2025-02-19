@@ -12,7 +12,7 @@ function Header({ currentStep, completedSteps, onMaximizeClick, onNavigate, disa
                 <div className="steps">
                     {steps.map((num) => (
                         <Fragment key={num}>
-                            <button onClick={() => { if (disabled) {return} onNavigate(num) }} className={`step ${currentStep === num ? 'current' : ''} ${completedSteps >= num ? 'done' : ''}`} disabled={completedSteps + 1 < num}>{num}</button>
+                            <button onClick={() => { if (disabled) {return} onNavigate(num) }} className={`step ${currentStep === num ? 'current' : ''} ${completedSteps >= num ? 'done' : ''}`} disabled={completedSteps + 1 < num}>{completedSteps == 3? <img src={CheckSvg}></img>:num}</button>
                             {num != steps.length ? <div className={`step-divider ${completedSteps >= num ? '' : 'dashed'}`}></div> : ""}
                         </Fragment>
                     ))}
