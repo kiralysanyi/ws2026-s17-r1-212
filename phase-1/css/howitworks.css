@@ -99,6 +99,7 @@
     background-color: white;
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    overflow: hidden;
 }
 
 #how-it-works .card .content .number {
@@ -136,6 +137,12 @@
 #blinking-cursor {
     display: none;
     animation: 1s linear infinite blink;
+}
+
+@media screen and (max-width:600px) {
+    #card-nearest:hover #blinking-cursor {
+        display: none;
+    }
 }
 
 @keyframes blink {
@@ -204,33 +211,44 @@
     }
 }
 
-#card-pick:hover #second-card-washer .washer-paths-2 {
-    stroke-dasharray: var(--length);
-    stroke-dashoffset: 0;
-    animation: 2s linear infinite path-animation-3;
-    animation-fill-mode: forwards;
-}
 
 
-#card-pick:hover #second-card-washer .washer-path-3 {
-    stroke-dasharray: var(--length);
-    stroke-dashoffset: 0;
-    animation: 2s linear infinite path-animation-2;
-    animation-fill-mode: forwards;
-}
-
-#card-pick:hover #second-card-washer .washer-paths-1 {
-    stroke-dasharray: var(--length);
-    stroke-dashoffset: 0;
-
-    animation: 2s linear infinite path-animation;
-    animation-fill-mode: forwards;
+@media screen and (min-width: 600px) {
+    #card-pick:hover #second-card-washer .washer-paths-2 {
+        stroke-dasharray: var(--length);
+        stroke-dashoffset: 0;
+        animation: 2s linear infinite path-animation-3;
+        animation-fill-mode: forwards;
+    }
+    
+    
+    #card-pick:hover #second-card-washer .washer-path-3 {
+        stroke-dasharray: var(--length);
+        stroke-dashoffset: 0;
+        animation: 2s linear infinite path-animation-2;
+        animation-fill-mode: forwards;
+    }
+    
+    #card-pick:hover #second-card-washer .washer-paths-1 {
+        stroke-dasharray: var(--length);
+        stroke-dashoffset: 0;
+    
+        animation: 2s linear infinite path-animation;
+        animation-fill-mode: forwards;
+    }
 }
 
 /* 3rd card related stuff */
 #card-start:hover #washer-rotating-part {
     transform-origin: 45.5px 49.5px;
     animation: 1s linear infinite spin;
+}
+
+@media screen and (max-width:600px) {
+    #card-start:hover #washer-rotating-part {
+        transform-origin: 45.5px 49.5px;
+        animation: none;
+    }
 }
 
 @keyframes spin {
