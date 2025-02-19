@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "../phase-2",
+    outDir: "../phase-2/",
     assetsDir: "assets",
     emptyOutDir: true
   }
