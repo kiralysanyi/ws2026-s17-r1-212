@@ -24,6 +24,14 @@
 
 }
 
+#locations .card-container::-webkit-scrollbar {
+    display: none;
+}
+  
+#locations .card-container {
+    scrollbar-width: none;
+}
+
 @media screen and (min-width:600px) {
     #locations .card:hover {
         transform: translate(0%, -10px);
