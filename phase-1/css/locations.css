@@ -36,7 +36,7 @@
     #locations .card:hover {
         transform: translate(0%, -10px);
         background-color: white;
-        border: 1px solid #5aa9f8;
+        border: 1px solid var(--primary-color);
     }
 }
 
