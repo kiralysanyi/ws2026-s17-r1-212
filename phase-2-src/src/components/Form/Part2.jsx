@@ -21,7 +21,7 @@ Array.from({ length: gridColumns }).map((_, col) => {
 
 let savedFloorPlan = gridTemplateJson;
 try {
-    savedFloorPlan = JSON.parse(window.name)["floorplanner"]
+    savedFloorPlan = JSON.parse(sessionStorage.getItem("floorplanner"))
     savedFloorPlan = savedFloorPlan ? savedFloorPlan : gridTemplateJson
 } catch (error) {
     console.log("No saved data found for floor planner");

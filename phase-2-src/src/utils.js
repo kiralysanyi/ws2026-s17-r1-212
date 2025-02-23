@@ -23,14 +23,14 @@ function convertGridToCSV(grid) {
 }
 
 function copyToClipboard() {
-    let formData = JSON.parse(window.name)["formdata"]
+    let formData = sessionStorage.getItem("formdata")
     navigator.clipboard.writeText(JSON.stringify(formData, null, 2));
     //I have added this alert because I hate when I get no feedback when copying with a button press
     window.alert("Copied form data to clipboard")
 }
 
 function exportFloorplan() {
-    let grid = JSON.parse(window.name)["floorplanner"]
+    let grid = JSON.parse(sessionStorage.getItem("floorplanner"))
     let csv = convertGridToCSV(grid)
     let blob = new Blob([csv], { type: "text/csv" })
     const blobURL = URL.createObjectURL(blob)

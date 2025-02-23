@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: "../phase-2/",
-    assetsDir: "assets",
+    assetsDir: "assets/",
     emptyOutDir: true
   }
 })

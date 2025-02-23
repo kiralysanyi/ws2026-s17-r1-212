@@ -10,7 +10,7 @@ function Part4() {
 
             <hr />
 
-            <button className="btn" onClick={() => {window.name = ""; location.reload()}}>START OVER</button>
+            <button className="btn" onClick={() => {sessionStorage.clear(); location.reload()}}>START OVER</button>
         </div>
     )
 }

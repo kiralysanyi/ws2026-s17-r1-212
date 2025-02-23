@@ -8,6 +8,23 @@ import Part4 from './components/Form/Part4'
 import validate from './Validator'
 import GridValidator from './GridValidator'
 
+let defaultFormData = {
+  "name": "",
+  "description": "",
+  "postalCode": "",
+  "city": "",
+  "address": "",
+  "from": "",
+  "to": "",
+  "openAt": "Every Day",
+  "freeWiFi": false,
+  "accessibleEntry": false,
+  "loungeArea": false,
+  "backgroundMusic": false,
+  "customerService": false,
+  "parking": "Easy"
+};
+
 function App() {
   const [isFullScreen, setIsFullScreen] = useState(false)
   const containerRef = useRef()
@@ -47,38 +64,23 @@ function App() {
 }
 */
 
-  let savedFormData = {
-    "name": "",
-    "description": "",
-    "postalCode": "",
-    "city": "",
-    "address": "",
-    "from": "",
-    "to": "",
-    "openAt": "Every Day",
-    "freeWiFi": false,
-    "accessibleEntry": false,
-    "loungeArea": false,
-    "backgroundMusic": false,
-    "customerService": false,
-    "parking": "Easy"
-  };
-
-  let savedData = {};
+  let savedFormData;
   try {
-    savedData = JSON.parse(window.name)
-    savedFormData = savedData["formdata"]
+    savedFormData = JSON.parse(sessionStorage.getItem("formdata"))
+    savedFormData = savedFormData ? savedFormData : defaultFormData
   } catch (error) {
     console.log("No saved form data found.");
   }
-
   const [formData, setFormData] = useState(savedFormData)
-  const [completedSteps, setCompletedSteps] = useState(savedData["completed"] ? savedData["completed"] : 0)
-  const [currentStep, setCurrentStep] = useState(savedData["current"] ? savedData["current"] : 1)
-  let floorPlannerData = savedData["floorplanner"] ? savedData["floorplanner"] : null;
+  const [completedSteps, setCompletedSteps] = useState(sessionStorage.getItem("completed") ? parseInt(sessionStorage.getItem("completed")) : 0)
+  const [currentStep, setCurrentStep] = useState(sessionStorage.getItem("current") ? parseInt(sessionStorage.getItem("current")) : 1)
+  let floorPlannerData = JSON.parse(sessionStorage.getItem("floorplanner"))
 
   const saveData = () => {
-    window.name = JSON.stringify({ formdata: formData, completed: completedSteps, current: currentStep, floorplanner: floorPlannerData })
+    sessionStorage.setItem("formdata", JSON.stringify(formData))
+    sessionStorage.setItem("current", currentStep)
+    sessionStorage.setItem("completed", completedSteps)
+    sessionStorage.setItem("floorplanner", JSON.stringify(floorPlannerData))
   }
 
   saveData()
